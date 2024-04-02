@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TEKKI</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+<body>
+<video autoplay muted loop id="background-video">
+    <source th:src="@{/background.mp4}" type="video/mp4">
+</video>
+<div class="header">
+    <h1>TEKKI 🤔</h1>
+    <p>Devinerez-vous qui est la personne ?</p>
+    <button class="startButton" onclick="window.location.href='/game'">Commencer</button>
+</div>
+
+</body>
+</html>
