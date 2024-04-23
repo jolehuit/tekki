@@ -1,28 +1,27 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    overflow: hidden; /* Empêche le défilement de la page */
-    color: white; /* Couleur du texte pour le reste de la page */
+    overflow: hidden;
+    color: white;
 }
 
-/* Style pour la vidéo */
 #background-video {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    z-index: -1; /* Assure que la vidéo reste en arrière-plan */
+    z-index: -1;
 }
 
-/* Styles pour le contenu */
+
 .header {
-    color: #f5f6fa; /* Couleur du texte pour le header */
+    color: #f5f6fa;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Ajuste la hauteur pour centrer le contenu */
+    height: 100vh;
     text-align: center;
 }
 
@@ -38,7 +37,6 @@ p {
 }
 
 
-/* Effet de survol sur h1 */
 h1:hover {
     transform: scale(1.2) rotate(5deg);
 }

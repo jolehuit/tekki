@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Page - TEKKI</title>
+    <link th:href="@{/styles/game.css}" rel="stylesheet" />
+</head>
+<video autoplay muted loop id="background-video">
+    <source th:src="@{/background.mp4}" type="video/mp4">
+</video>
+<body>
+<div class="container">
+    <h1>C'est parti ! 🤓</h1>
+    <p>Sélectionnez une question à poser :</p>
+    <select id="questionsSelect">
+        <option value="1">Est-ce que votre personnage a des lunettes ?</option>
+        <option value="2">Est-ce que votre personnage a des cheveux blonds ?</option>
+        <option value="3">Est-ce que votre personnage est un homme ?</option>
+        <option value="4">Est-ce que votre personnage a plus de 30 ans ?</option>
+        <option value="5">Est-ce que votre personnage a les cheveux longs ?</option>
+        <option value="6">Est-ce que votre personnage a un tatouage visible ?</option>
+        <option value="7">Est-ce que votre personnage porte un chapeau ?</option>
+        <option value="8">Est-ce que votre personnage a les yeux bleus ?</option>
+        <option value="9">Est-ce que votre personnage est célèbre pour sa carrière musicale ?</option>
+        <option value="10">Est-ce que votre personnage est un personnage fictif ?</option>
+        <option value="11">Est-ce que votre personnage a déjà joué dans un film ?</option>
+        <option value="12">Est-ce que votre personnage est connu pour être un athlète ?</option>
+        <option value="13">Est-ce que votre personnage a des cheveux frisés ?</option>
+        <option value="14">Est-ce que votre personnage porte des lunettes de soleil ?</option>
+        <option value="15">Est-ce que votre personnage a une barbe ?</option>
+        <option value="16">Est-ce que votre personnage porte souvent du rouge ?</option>
+        <option value="17">Est-ce que votre personnage a remporté un prix notable ?</option>
+        <option value="18">Est-ce que votre personnage est associé à la science ?</option>
+        <option value="19">Est-ce que votre personnage est un personnage de bande dessinée ?</option>
+        <option value="20">Est-ce que votre personnage est un entrepreneur célèbre ?</option>
+    </select>
+    <div class="buttons">
+        <button class="askButton" onclick="askQuestion()">Je pose la question !</button>
+        <button class="guessButton" onclick="window.location.href='/guess'">Je veux deviner tekki !</button>
+    </div>
+</div>
+<script>
+    function askQuestion() {
+        var selectedQuestion = document.getElementById("questionsSelect").value;
+        alert('Question ' + selectedQuestion + ' sélectionnée.');
+    }
+</script>
+</body>
+</html>

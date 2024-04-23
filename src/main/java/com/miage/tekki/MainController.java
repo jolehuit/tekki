@@ -11,4 +11,10 @@ public class MainController {
     public String showTekkiPage() {
         return "tekki";
     }
+    @GetMapping("/game")
+    public String showGamePage() {
+        return "game"; // Assurez-vous que "game.html" est bien dans le répertoire des templates.
+    }
+
+
 }
