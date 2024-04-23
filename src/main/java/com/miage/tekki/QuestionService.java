@@ -1,2 +1,4 @@
-package com.miage.tekki;public class QuestionService {
+package com.miage.tekki;
+
+public class QuestionService {
 }
