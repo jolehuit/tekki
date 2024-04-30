@@ -7,23 +7,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
+
 import java.util.List;
 
 @Controller
 @SessionAttributes({"score", "questions", "selectedPerson"})
 public class MainController {
 
-    private final CsvPeopleRepository csvPeopleRepository;
     private final QuestionService questionService;
+    private final PersonService personService;
 
-    public MainController(CsvPeopleRepository csvPeopleRepository, QuestionService questionService) {
-        this.csvPeopleRepository = csvPeopleRepository;
+    public MainController(QuestionService questionService, PersonService personService) {
         this.questionService = questionService;
-    }
-
-    @GetMapping("/")
-    public String showTekkiPage() {
-        return "tekki";
+        this.personService = personService;
     }
 
     @GetMapping("/game")
@@ -31,7 +27,7 @@ public class MainController {
         session.setAttribute("score", 0);
         List<Question> questions = questionService.getAllQuestions();
         model.addAttribute("questions", questions);
-        Person selectedPerson = csvPeopleRepository.getRandomPerson();
+        Person selectedPerson = personService.getRandomPerson();
         session.setAttribute("selectedPerson", selectedPerson);
         return "game";
     }
@@ -42,13 +38,12 @@ public class MainController {
         session.setAttribute("score", score + 1);
 
         List<Question> questions = (List<Question>) session.getAttribute("questions");
-        questions.removeIf(q -> q.id() == questionId);
+        questionService.removeQuestion(questions, questionId);
         model.addAttribute("questions", questions);
 
-        List<Person> filteredPeople = csvPeopleRepository.getFilteredPeople(questionId);
+        List<Person> filteredPeople = personService.getFilteredPeople(questionId);
         model.addAttribute("people", filteredPeople);
 
         return "game";
     }
-
 }
