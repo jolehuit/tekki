@@ -12,8 +12,12 @@ public class AppConfig {
     }
 
     @Bean
+    public PersonService personService () {
+        return new PersonService();
+    }
+
+    @Bean
     public QuestionService questionService() {
-        // Initialisez votre QuestionService ici selon vos besoins
         return new QuestionService();
     }
 }
