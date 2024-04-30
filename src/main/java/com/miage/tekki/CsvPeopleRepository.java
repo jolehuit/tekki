@@ -1,4 +1,5 @@
 package com.miage.tekki;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -9,10 +10,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DatabaseSimulator {
+public class CsvPeopleRepository {
     private List<Person> people;
 
-    public DatabaseSimulator() {
+    public CsvPeopleRepository() {
         this.people = new ArrayList<>();
     }
 
@@ -20,7 +21,7 @@ public class DatabaseSimulator {
         Path path = Paths.get(csvFilePath);
 
         try (BufferedReader br = Files.newBufferedReader(path)) {
-            // Sauter la ligne d'en-tête
+            // Skip the header line
             String line = br.readLine();
 
             while ((line = br.readLine()) != null) {
@@ -36,19 +37,25 @@ public class DatabaseSimulator {
     private Person createPerson(String[] metadata) {
         String id = metadata[0];
         String name = metadata[1];
-        String profession = metadata[3];
-        LocalDate birthday = LocalDate.parse(metadata[4], DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-        int age = Integer.parseInt(metadata[5]);
-        String zodiac = metadata[6];
-        String birthPlace = metadata[7];
-        int heightInCm = !metadata[8].isEmpty() ? Integer.parseInt(metadata[8].replaceAll("\\D+", "")) : 0;
-        String eyeColor = metadata[13];
-        String hairColor = metadata[14];
-        // ... créez une Personne avec ces données
+        String profession = metadata[2];
+        LocalDate birthday = LocalDate.parse(metadata[3], DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        int age = Integer.parseInt(metadata[4]);
+        String zodiac = metadata[5];
+        String birthPlace = metadata[6];
+        int heightInCm = !metadata[7].isEmpty() ? Integer.parseInt(metadata[7].replaceAll("\\D+", "")) : 0;
+        String eyeColor = metadata[8];
+        String hairColor = metadata[9];
 
-        // Notez que vous devez gérer les données manquantes et les conversions nécessaires
         return new Person(id, name, profession, birthday, age, zodiac, birthPlace, heightInCm, eyeColor, hairColor);
     }
 
-    // Les autres méthodes comme getRandomPerson() restent les mêmes...
+    public List<Person> getFilteredPeople(int questionId) {
+        return null;
+    }
+
+    public Person getRandomPerson() {
+        return null;
+    }
+
+    // Other methods like getRandomPerson() remain unchanged...
 }

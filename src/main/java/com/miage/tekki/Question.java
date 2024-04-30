@@ -39,9 +39,9 @@ public class Question {
         // Par exemple:
         switch (property) {
             case "eyeColor":
-                return person.getEyeColor().equalsIgnoreCase(expectedAnswer);
+                return person.eyeColor().equalsIgnoreCase(expectedAnswer);
             case "hairColor":
-                return person.getHairColor().equalsIgnoreCase(expectedAnswer);
+                return person.hairColor().equalsIgnoreCase(expectedAnswer);
             case "age":
                 // Dans ce cas, expectedAnswer devrait être un intervalle ou une valeur spécifique.
                 // Vous devez implémenter la logique pour interpréter correctement expectedAnswer.

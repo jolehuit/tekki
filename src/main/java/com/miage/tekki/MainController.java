@@ -13,15 +13,15 @@ import java.util.List;
 @SessionAttributes({"score", "questions", "selectedPerson"})
 public class MainController {
 
-    private final DatabaseSimulator databaseSimulator;
+    private final CsvPeopleRepository csvPeopleRepository;
     private final QuestionService questionService;
 
-    public MainController(DatabaseSimulator databaseSimulator, QuestionService questionService) {
-        this.databaseSimulator = databaseSimulator;
+    public MainController(CsvPeopleRepository csvPeopleRepository, QuestionService questionService) {
+        this.csvPeopleRepository = csvPeopleRepository;
         this.questionService = questionService;
     }
 
-    @GetMapping
+    @GetMapping("/")
     public String showTekkiPage() {
         return "tekki";
     }
@@ -31,7 +31,7 @@ public class MainController {
         session.setAttribute("score", 0);
         List<Question> questions = questionService.getAllQuestions();
         model.addAttribute("questions", questions);
-        Person selectedPerson = databaseSimulator.getRandomPerson();
+        Person selectedPerson = csvPeopleRepository.getRandomPerson();
         session.setAttribute("selectedPerson", selectedPerson);
         return "game";
     }
@@ -45,8 +45,8 @@ public class MainController {
         questions.removeIf(q -> q.getId() == questionId);
         model.addAttribute("questions", questions);
 
-        List<Person> filteredPeople = databaseSimulator.getFilteredPeople(questionId);
-        model.addAttribute("people", filteredPeople); // Ajoutez les personnes filtrées au modèle.
+        List<Person> filteredPeople = csvPeopleRepository.getFilteredPeople(questionId);
+        model.addAttribute("people", filteredPeople);
 
         return "game";
     }
