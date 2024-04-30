@@ -15,18 +15,18 @@ public class Person {
     private String eyeColor;
     private String hairColor;
 
-    public Person(String id, String name, String profession, String birthday, int age,
+    public Person(String id, String name, String profession, LocalDate birthday, int age,
                   String zodiac, String birthPlace, int heightInCm, String eyeColor, String hairColor) {
         this.id = id;
         this.name = name;
         this.profession = profession;
-        this.birthday = LocalDate.parse(birthday, DateTimeFormatter.ofPattern("dd/MM/yyyy", Locale.ENGLISH));
         this.age = age;
         this.zodiac = zodiac;
         this.birthPlace = birthPlace;
         this.heightInCm = heightInCm;
         this.eyeColor = eyeColor;
         this.hairColor = hairColor;
+        this.birthday = birthday;
     }
 
     // Getters
