@@ -42,7 +42,7 @@ public class MainController {
         session.setAttribute("score", score + 1);
 
         List<Question> questions = (List<Question>) session.getAttribute("questions");
-        questions.removeIf(q -> q.getId() == questionId);
+        questions.removeIf(q -> q.id() == questionId);
         model.addAttribute("questions", questions);
 
         List<Person> filteredPeople = csvPeopleRepository.getFilteredPeople(questionId);
