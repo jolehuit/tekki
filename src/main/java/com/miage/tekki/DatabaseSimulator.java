@@ -8,6 +8,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class DatabaseSimulator {
     private List<Person> people;
@@ -50,5 +51,12 @@ public class DatabaseSimulator {
         return new Person(id, name, profession, birthday, age, zodiac, birthPlace, heightInCm, eyeColor, hairColor);
     }
 
-    // Les autres méthodes comme getRandomPerson() restent les mêmes...
+    public Person getRandomPerson() {
+        if (!this.people.isEmpty()) {
+            Random random = new Random();
+            int randomIndex = random.nextInt(people.size());
+            return people.get(randomIndex);
+        }
+        return null;
+    }
 }
