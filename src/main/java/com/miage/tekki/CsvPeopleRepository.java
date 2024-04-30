@@ -9,6 +9,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class CsvPeopleRepository {
     private List<Person> people;
@@ -54,6 +55,11 @@ public class CsvPeopleRepository {
     }
 
     public Person getRandomPerson() {
+        if (!this.people.isEmpty()) {
+            Random random = new Random();
+            int randomIndex = random.nextInt(people.size());
+            return people.get(randomIndex);
+        }
         return null;
     }
 
