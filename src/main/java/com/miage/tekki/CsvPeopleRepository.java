@@ -46,8 +46,9 @@ public class CsvPeopleRepository {
         int heightInCm = !metadata[7].isEmpty() ? Integer.parseInt(metadata[7].replaceAll("\\D+", "")) : 0;
         String eyeColor = metadata[8];
         String hairColor = metadata[9];
+        char sex = metadata[10].charAt(0);
 
-        return new Person(id, name, profession, birthday, age, zodiac, birthPlace, heightInCm, eyeColor, hairColor);
+        return new Person(id, name, profession, birthday, age, zodiac, birthPlace, heightInCm, eyeColor, hairColor, sex);
     }
 
     public List<Person> getFilteredPeople(int questionId) {
