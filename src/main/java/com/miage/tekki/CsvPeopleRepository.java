@@ -63,5 +63,21 @@ public class CsvPeopleRepository {
         return null;
     }
 
+    public List<Person> selectRandomPeople() {
+        List<Person> randomPeople = new ArrayList<>();
+
+        Person personToGuess = getRandomPerson();
+        randomPeople.add(personToGuess);
+
+        List<Person> shuffledPeople = new ArrayList<>(people);
+        java.util.Collections.shuffle(shuffledPeople);
+
+        for (int i = 0; i < 19; i++) {
+            randomPeople.add(shuffledPeople.get(i));
+        }
+
+        return randomPeople;
+    }
+
     // Other methods like getRandomPerson() remain unchanged...
 }
