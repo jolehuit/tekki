@@ -1,4 +1,4 @@
-*Spécifications fonctionnelles*
+**Spécifications fonctionnelles**
 
 Sur la page d'accueil, le joueur doit saisir son nom avant de commencer une partie.
 
