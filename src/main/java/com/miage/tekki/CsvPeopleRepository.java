@@ -79,6 +79,10 @@ public class CsvPeopleRepository {
 
         return randomPeople;
     }
+    
+    public List<Person> getPeople() {
+    	return people;
+    }
 
     // Other methods like getRandomPerson() remain unchanged...
 }
