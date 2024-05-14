@@ -67,7 +67,7 @@ public class CsvPeopleRepository {
     public List<Person> selectRandomPeople() {
         List<Person> randomPeople = new ArrayList<>();
 
-        Person personToGuess = getRandomPerson();
+        Person personToGuess = this.getRandomPerson();
         randomPeople.add(personToGuess);
 
         List<Person> shuffledPeople = new ArrayList<>(people);
