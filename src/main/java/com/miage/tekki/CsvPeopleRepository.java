@@ -81,7 +81,7 @@ public class CsvPeopleRepository {
     }
     
     public List<Person> getPeople() {
-    	return people;
+    	return people; 
     }
 
     // Other methods like getRandomPerson() remain unchanged...
