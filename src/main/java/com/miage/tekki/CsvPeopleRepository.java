@@ -9,6 +9,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
 
 public class CsvPeopleRepository {
@@ -38,17 +39,17 @@ public class CsvPeopleRepository {
     private Person createPerson(String[] metadata) {
         String id = metadata[0];
         String name = metadata[1];
-        String profession = metadata[2];
+        String profession = metadata[5];
         LocalDate birthday = LocalDate.parse(metadata[3], DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         int age = Integer.parseInt(metadata[4]);
         String zodiac = metadata[5];
-        String birthPlace = metadata[6];
-        int heightInCm = !metadata[7].isEmpty() ? Integer.parseInt(metadata[7].replaceAll("\\D+", "")) : 0;
-        String eyeColor = metadata[8];
-        String hairColor = metadata[9];
-        char sex = metadata[10].charAt(0);
+        String birthPlace = metadata[7];
+        int heightInCm = Integer.parseInt(metadata[8]);
+        String eyeColor = metadata[10];
+        String hairColor = metadata[11];
+        char sex = metadata[2].charAt(0);
 
-        return new Person(id, name, profession, birthday, age, zodiac, birthPlace, heightInCm, eyeColor, hairColor, sex);
+        return new Person(id, name, profession, birthday, age, zodiac, birthPlace, Optional.of(heightInCm), eyeColor, hairColor, sex);
     }
 
     public List<Person> getFilteredPeople(int questionId) {

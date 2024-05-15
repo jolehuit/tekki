@@ -3,6 +3,7 @@ package com.miage.tekki;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.LocalDate;
+import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,7 +23,7 @@ class TekkiQuestionTests {
 	            34,
 	            "Taurus",
 	            "New York City",
-	            180,
+	            Optional.of(180),
 	            "Brown",
 	            "Black",
 	            'M'
@@ -36,7 +37,7 @@ class TekkiQuestionTests {
 	            -5,
 	            "Taurus",
 	            "New York City",
-	            180,
+	            Optional.of(180),
 	            "Brown",
 	            "Black",
 	            'M'

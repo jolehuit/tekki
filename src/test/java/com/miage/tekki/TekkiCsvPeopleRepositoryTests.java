@@ -22,9 +22,8 @@ public class TekkiCsvPeopleRepositoryTests {
     
     @Test
     public void testLoadPeopleFromCSV() {
-    	repository.loadPeopleFromCSV("Z:/tests-csv-load-G2L/DATASET_TOP_100_EN_V1.csv");
+    	repository.loadPeopleFromCSV("C:/Users/Elouan/Downloads/DATASET_TOP_100_EN_V1.csv");
     	
     	assertFalse(repository.getPeople().isEmpty());
     }
-    
 }
