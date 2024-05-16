@@ -26,4 +26,18 @@ public class TekkiCsvPeopleRepositoryTests {
     	
     	assertFalse(repository.getPeople().isEmpty());
     }
+    
+    @Test
+    public void testGetRandomPerson() {
+    	assertNull(repository.getRandomPerson());
+    	
+    	repository.loadPeopleFromCSV("C:/Users/Elouan/Downloads/DATASET_TOP_100_EN_V1.csv");
+    	assertEquals(repository.getRandomPerson().getClass(), Person.class);
+    }
+    
+    @Test
+    public void testSelectRandomPeople() {
+    	assertEquals(repository.selectRandomPeople().size(), 20);
+    	
+    }
 }
