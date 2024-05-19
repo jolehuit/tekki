@@ -21,8 +21,6 @@ public class CsvPeopleRepository {
     }
 
     public void loadPeopleFromCSV(String csvFilePath) {
-        Path path = Paths.get(csvFilePath);
-
         try (BufferedReader br = new BufferedReader(new FileReader(csvFilePath))){
             // Skip the header line
             String line = br.readLine();
