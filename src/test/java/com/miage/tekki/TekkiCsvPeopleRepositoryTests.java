@@ -1,6 +1,7 @@
 package com.miage.tekki;
 
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.Before;
@@ -21,9 +22,8 @@ public class TekkiCsvPeopleRepositoryTests {
     
     @Test
     public void testLoadPeopleFromCSV() {
-    	repository.loadPeopleFromCSV("Z:/tests-csv-load-G2L/DATASET_TOP_100_EN_V1.csv");
+    	repository.loadPeopleFromCSV("C:/Users/Elouan/Downloads/DATASET_TOP_100_EN_V1.csv");
     	
     	assertFalse(repository.getPeople().isEmpty());
     }
-    
 }
