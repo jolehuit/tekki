@@ -167,4 +167,14 @@ public class CsvPeopleRepository {
     public List<Person> getPeople() {
         return people;
     }
+
+    public Person verifyGuess(String idGuess, Person personToGuess){
+        List<Person> randomPeople = this.selectRandomPeopleIncluding(personToGuess);
+        for (Person person : randomPeople) {
+            if (person.id().equals(idGuess)) {
+                return person;
+            }
+        }
+        return null;
+    }
 }
