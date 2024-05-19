@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess Page - TEKKI</title>
+    <link th:href="@{/styles/guess.css}" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+    <h1>Choisissez la personne</h1>
+    <form id="guessSelect" action="/submitGuess" method="post">
+        <select name="selectedPersonId">
+            <option th:each="person : ${randomPeople}" th:value="${person.id}" th:text="${person.name}"></option>
+        </select>
+        <div class="buttons">
+            <button class="submitGuessButton" type="submit">Je devine !</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -12,7 +12,7 @@ public class TekkiPersonServiceTests {
 
     @BeforeEach
     void setUp() {
-        personService = new PersonService();
+        personService = new PersonService(csvPeopleRepository);
         csvPeopleRepository = new CsvPeopleRepository();
     }
 

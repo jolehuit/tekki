@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Result Page - TEKKI</title>
+    <link th:href="@{/styles/result.css}" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+    <h1 th:text="${guessResult}"></h1>
+    <div class="buttons">
+        <a th:if="${guessResult.contains('Bravo')}" th:href="@{/game}" class="button">Rejouer</a>
+        <a th:if="${!guessResult.contains('Bravo')}" th:href="@{/game}" class="button">Reposer des questions</a>
+    </div>
+</div>
+</body>
+</html>

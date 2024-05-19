@@ -2,34 +2,38 @@ package com.miage.tekki;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
+import org.springframework.core.io.Resource;
 
 public class CsvPeopleRepository {
-    private List<Person> people;
+    private final List<Person> people;
 
-    public CsvPeopleRepository() {
+    public CsvPeopleRepository(Resource csvResource) {
         this.people = new ArrayList<>();
+        loadPeopleFromResource(csvResource);
     }
 
-    public void loadPeopleFromCSV(String csvFilePath) {
-        Path path = Paths.get(csvFilePath);
-
-        try (BufferedReader br = Files.newBufferedReader(path)) {
-            // Skip the header line
+    private void loadPeopleFromResource(Resource csvResource) {
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(csvResource.getInputStream()))) {
             String line = br.readLine();
-
             while ((line = br.readLine()) != null) {
-                String[] attributes = line.split(";");
-                Person person = createPerson(attributes);
-                people.add(person);
+                try {
+                    String[] attributes = line.split(";");
+                    Person person = createPerson(attributes);
+                    if (person != null) {
+                        people.add(person);
+                    }
+                } catch (Exception e) {
+                    System.err.println("Error parsing line: " + line);
+                    e.printStackTrace();
+                }
             }
         } catch (IOException ioe) {
             ioe.printStackTrace();
@@ -37,23 +41,66 @@ public class CsvPeopleRepository {
     }
 
     private Person createPerson(String[] metadata) {
-        String id = metadata[0];
-        String name = metadata[1];
-        String profession = metadata[5];
-        LocalDate birthday = LocalDate.parse(metadata[3], DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-        int age = Integer.parseInt(metadata[4]);
-        String zodiac = metadata[5];
-        String birthPlace = metadata[7];
-        int heightInCm = Integer.parseInt(metadata[8]);
-        String eyeColor = metadata[10];
-        String hairColor = metadata[11];
-        char sex = metadata[2].charAt(0);
+        try {
+            String id = getValue(metadata, 0);
+            String name = getValue(metadata, 1);
+            char sex = getValue(metadata, 2).charAt(0);
+            LocalDate birthday = LocalDate.parse(getValue(metadata, 3), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            int age = Integer.parseInt(getValue(metadata, 4));
+            String nationality = getValue(metadata, 5);
+            String zodiac = getValue(metadata, 6);
+            String birthPlace = getValue(metadata, 7);
+            Optional<Integer> heightInCm = parseInteger(getValue(metadata, 8));
+            Optional<Integer> weightInKg = parseInteger(getValue(metadata, 9));
+            String eyeColor = getValue(metadata, 10);
+            String hairColor = getValue(metadata, 11);
+            Optional<LocalDate> deathDate = parseDate(getValue(metadata, 12));
+            Optional<String> particularity1 = parseOptional(getValue(metadata, 13));
+            Optional<String> particularity2 = parseOptional(getValue(metadata, 14));
+            Optional<String> particularity3 = parseOptional(getValue(metadata, 15));
 
-        return new Person(id, name, profession, birthday, age, zodiac, birthPlace, Optional.of(heightInCm), eyeColor, hairColor, sex);
+            return new Person(id, name, sex, birthday, age, nationality, zodiac, birthPlace,
+                    heightInCm, weightInKg, eyeColor, hairColor, deathDate,
+                    particularity1, particularity2, particularity3);
+        } catch (Exception e) {
+            System.err.println("Error creating person from metadata: " + String.join(";", metadata));
+            e.printStackTrace();
+            return null;
+        }
     }
 
-    public List<Person> getFilteredPeople(int questionId) {
-        return null;
+    private String getValue(String[] metadata, int index) {
+        return index < metadata.length ? metadata[index] : "–";
+    }
+
+    private Optional<Integer> parseInteger(String value) {
+        try {
+            return value.equals("–") ? Optional.empty() : Optional.of(Integer.parseInt(value));
+        } catch (NumberFormatException e) {
+            return Optional.empty();
+        }
+    }
+
+    private Optional<LocalDate> parseDate(String value) {
+        try {
+            return value.equals("–") ? Optional.empty() : Optional.of(LocalDate.parse(value, DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+        } catch (Exception e) {
+            return Optional.empty();
+        }
+    }
+
+    private Optional<String> parseOptional(String value) {
+        return value.equals("–") ? Optional.empty() : Optional.of(value);
+    }
+
+    public List<Person> getFilteredPeople(String property, String expectedAnswer) {
+        List<Person> filteredPeople = new ArrayList<>();
+        for (Person person : people) {
+            if (new Question(0, "", property).matches(person, expectedAnswer)) {
+                filteredPeople.add(person);
+            }
+        }
+        return filteredPeople;
     }
 
     public Person getRandomPerson() {
@@ -65,25 +112,59 @@ public class CsvPeopleRepository {
         return null;
     }
 
-    public List<Person> selectRandomPeople() {
+    public List<Person> selectRandomPeopleIncluding(Person personToGuess) {
         List<Person> randomPeople = new ArrayList<>();
 
-        Person personToGuess = this.getRandomPerson();
-        randomPeople.add(personToGuess);
+        if (personToGuess != null) {
+            randomPeople.add(personToGuess);
 
-        List<Person> shuffledPeople = new ArrayList<>(people);
-        java.util.Collections.shuffle(shuffledPeople);
+            List<Person> shuffledPeople = new ArrayList<>(people);
+            Collections.shuffle(shuffledPeople);
 
-        for (int i = 0; i < 19; i++) {
-            randomPeople.add(shuffledPeople.get(i));
+            for (Person person : shuffledPeople) {
+                if (!person.equals(personToGuess) && randomPeople.size() < 10) {
+                    randomPeople.add(person);
+                }
+            }
         }
 
         return randomPeople;
     }
-    
-    public List<Person> getPeople() {
-    	return people; 
+
+    public String getPropertyByQuestion(Person person, Question question) {
+        switch (question.property()) {
+            case "eyeColor":
+                return person.eyeColor();
+            case "age":
+                return String.valueOf(person.age());
+            case "heightInCm":
+                return person.heightInCm().map(String::valueOf).orElse(null);
+            case "weightInKg":
+                return person.weightInKg().map(String::valueOf).orElse(null);
+            case "sex":
+                return String.valueOf(person.sex());
+            case "nationality":
+                return person.nationality();
+            case "zodiac":
+                return person.zodiac();
+            case "birthPlace":
+                return person.birthPlace();
+            case "hairColor":
+                return person.hairColor();
+            case "deathDate":
+                return person.deathDate().map(Object::toString).orElse(null);
+            case "particularity1":
+                return person.particularity1().orElse(null);
+            case "particularity2":
+                return person.particularity2().orElse(null);
+            case "particularity3":
+                return person.particularity3().orElse(null);
+            default:
+                return null;
+        }
     }
 
-    // Other methods like getRandomPerson() remain unchanged...
+    public List<Person> getPeople() {
+        return people;
+    }
 }

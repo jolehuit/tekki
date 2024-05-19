@@ -2,22 +2,29 @@ package com.miage.tekki;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
 @Configuration
 public class AppConfig {
 
     @Bean
-    public CsvPeopleRepository databaseSimulator() {
-        return new CsvPeopleRepository();
+    public Resource csvResource() {
+        return new ClassPathResource("people.csv");
     }
 
     @Bean
-    public PersonService personService () {
-        return new PersonService();
+    public CsvPeopleRepository databaseSimulator(Resource csvResource) {
+        return new CsvPeopleRepository(csvResource);
     }
 
     @Bean
-    public QuestionService questionService() {
-        return new QuestionService();
+    public PersonService personService(CsvPeopleRepository csvPeopleRepository) {
+        return new PersonService(csvPeopleRepository);
+    }
+
+    @Bean
+    public QuestionService questionService(CsvPeopleRepository csvPeopleRepository) {
+        return new QuestionService(csvPeopleRepository);
     }
 }
