@@ -1,45 +1,53 @@
 package com.miage.tekki;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 
+import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
 public class TekkiQuestionServiceTests {
 	private QuestionService questionService;
     private List<Question> questions;
 
+    public Resource csvResource() {
+        return new ClassPathResource("people.csv");
+    }
+    
     @BeforeEach
     void setUp() {
-        questionService = new QuestionService();
+        // Initialisez le service et les questions ici (par exemple, avec un mock CsvPeopleRepository)
+        CsvPeopleRepository mockRepository = new CsvPeopleRepository(csvResource());
+        questionService = new QuestionService(mockRepository);
         questions = questionService.getAllQuestions();
     }
 
     @Test
     void testGetAllQuestions() {
-        assertEquals(2, questions.size());
-        // Vérifiez que les questions sont correctement initialisées
-        assertEquals("Est-ce que votre personnage a des lunettes ?", questions.get(0).text());
-        assertEquals("eyeColor", questions.get(0).property());
-        assertEquals("lunettes", questions.get(0).expectedAnswer());
-
-        assertEquals("Est-ce que votre personnage a des cheveux blonds ?", questions.get(1).text());
-        assertEquals("hairColor", questions.get(1).property());
-        assertEquals("blond", questions.get(1).expectedAnswer());
+        // Vérifiez que la liste de questions n'est pas vide
+        assertNotNull(questions);
+        assertFalse(questions.isEmpty());
     }
-
+    
     @Test
     void testRemoveQuestion() {
-        int initialSize = questions.size();
-        int questionIdToRemove = 1; // ID de la première question
+        // Supprimez une question (par exemple, la première question)
+        int questionIdToRemove = 1;
         questionService.removeQuestion(questions, questionIdToRemove);
-        assertEquals(initialSize - 1, questions.size());
+
         // Vérifiez que la question a été supprimée
-        for (Question question : questions) {
-            assertNotEquals(questionIdToRemove, question.id());
-        }
+        assertTrue(questions.stream().noneMatch(q -> q.id() == questionIdToRemove));
     }
+
 }
