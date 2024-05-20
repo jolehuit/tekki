@@ -19,6 +19,7 @@ import java.util.Optional;
 
 public class TekkiCsvPeopleRepositoryTests {
     private CsvPeopleRepository repository;
+    private Person personNI;
 
     public Resource csvResource() {
         return new ClassPathResource("people.csv");
@@ -45,6 +46,7 @@ public class TekkiCsvPeopleRepositoryTests {
                 "12345",
                 "Alice",
                 'F',
+                "Prof",
                 LocalDate.of(1990, 5, 15),
                 31,
                 "French",
@@ -52,8 +54,8 @@ public class TekkiCsvPeopleRepositoryTests {
                 "Paris",
                 Optional.of(165),
                 Optional.of(60),
-                "Brown",
-                "Blonde",
+                Optional.of("Brown"),
+                Optional.of("Blonde"),
                 Optional.empty(),
                 Optional.of("Scar on left cheek"),
                 Optional.of("Tattoo on right arm"),
@@ -99,9 +101,74 @@ public class TekkiCsvPeopleRepositoryTests {
         question = new Question(12, "", "particularity3");
         assertNull(repository.getPropertyByQuestion(person, question));
         
-        question = new Question(12, "", "particularity4");
+        question = new Question(13, "", "profession");
+        assertEquals("Prof", repository.getPropertyByQuestion(person, question));
+        
+        question = new Question(11, "", "birthday");
+        assertEquals("1990-05-15", repository.getPropertyByQuestion(person, question));
+        
+        question = new Question(11, "", "name");
+        assertEquals("Alice", repository.getPropertyByQuestion(person, question));
+        
+        question = new Question(11, "", "id");
+        assertEquals("12345", repository.getPropertyByQuestion(person, question));
+        
+        question = new Question(13, "", "particularity4");
         assertNull(repository.getPropertyByQuestion(person, question));
 
+    }
+    
+    @Test
+    public void testSelectRandomPeopleIncluding() {
+    	Person person = new Person(
+                "12345",
+                "Alice",
+                'F',
+                "Prof",
+                LocalDate.of(1990, 5, 15),
+                31,
+                "French",
+                "Taurus",
+                "Paris",
+                Optional.of(165),
+                Optional.of(60),
+                Optional.of("Brown"),
+                Optional.of("Blonde"),
+                Optional.empty(),
+                Optional.of("Scar on left cheek"),
+                Optional.of("Tattoo on right arm"),
+                Optional.empty()
+        );
+    	
+    	assertFalse(repository.selectRandomPeopleIncluding(person).isEmpty());
+    	
+    	assertTrue(repository.selectRandomPeopleIncluding(personNI).isEmpty());
+    }
+    
+    @Test
+    public void testVerifyGuess() {
+    	Person person = new Person(
+                "12345",
+                "Alice",
+                'F',
+                "Prof",
+                LocalDate.of(1990, 5, 15),
+                31,
+                "French",
+                "Taurus",
+                "Paris",
+                Optional.of(165),
+                Optional.of(60),
+                Optional.of("Brown"),
+                Optional.of("Blonde"),
+                Optional.empty(),
+                Optional.of("Scar on left cheek"),
+                Optional.of("Tattoo on right arm"),
+                Optional.empty()
+        );
+    	
+    	assertTrue(repository.verifyGuess("12345", person));
+    	assertFalse(repository.verifyGuess("54879", person));
     }
     
 }
