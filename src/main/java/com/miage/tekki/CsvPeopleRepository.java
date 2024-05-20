@@ -172,12 +172,4 @@ public class CsvPeopleRepository {
                 return null;
         }
     }
-
-    public List<Person> getPeople() {
-        return people;
-    }
-
-    public boolean verifyGuess(String idGuess, Person personToGuess){
-        return personToGuess.id().equals(idGuess);
-    }
 }
