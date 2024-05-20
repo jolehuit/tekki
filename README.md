@@ -30,7 +30,7 @@ To install and run Tekki locally, follow these steps:
 
 1. **Clone the repository:**
     ```sh
-    git clone https://github.com/yourusername/tekki.git
+    git clone https://github.com/jolehuit/tekki.git
     cd tekki
     ```
 
