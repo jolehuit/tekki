@@ -1,6 +1,6 @@
 # Tekki
 
-Tekki is a guessing game developed using Java Spring Framework, Maven, HTML, CSS, Thymeleaf, and JUnit for testing by a group of MIAGE student from Université Paris-Cité: Max, Younes, Elouan, Laskhan. The aim of the game is to identify a person based on hints provided by the computer. Players start with 150 points and can ask questions to narrow down the possibilities or make a direct guess.
+Tekki is a guessing game developed using Java Spring Framework, Maven, HTML, CSS, Thymeleaf, and JUnit for testing by a group of MIAGE student from Université Paris-Cité: Max, Younes, Elouan, Laskhan and Hai-My. The aim of the game is to identify a person based on hints provided by the computer. Players start with 150 points and can ask questions to narrow down the possibilities or make a direct guess.
 
 ## Table of Contents
 
