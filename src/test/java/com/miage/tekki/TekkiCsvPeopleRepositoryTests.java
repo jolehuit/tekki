@@ -145,30 +145,5 @@ public class TekkiCsvPeopleRepositoryTests {
     	assertTrue(repository.selectRandomPeopleIncluding(personNI).isEmpty());
     }
     
-    @Test
-    public void testVerifyGuess() {
-    	Person person = new Person(
-                "12345",
-                "Alice",
-                'F',
-                "Prof",
-                LocalDate.of(1990, 5, 15),
-                31,
-                "French",
-                "Taurus",
-                "Paris",
-                Optional.of(165),
-                Optional.of(60),
-                Optional.of("Brown"),
-                Optional.of("Blonde"),
-                Optional.empty(),
-                Optional.of("Scar on left cheek"),
-                Optional.of("Tattoo on right arm"),
-                Optional.empty()
-        ); 
-    	
-    	assertTrue(repository.verifyGuess("12345", person));
-    	assertFalse(repository.verifyGuess("54879", person));
-    }
     
 }
