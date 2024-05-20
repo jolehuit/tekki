@@ -15,6 +15,8 @@ import java.util.Optional;
 
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.ui.Model;
 
 import jakarta.servlet.http.HttpSession;
@@ -25,15 +27,21 @@ public class TekkiMainControllerTests {
     private PersonService personService;
     private HttpSession session;
     private Model model;
+    private CsvPeopleRepository repository;
+    
+    public Resource csvResource() {
+        return new ClassPathResource("people.csv");
+    }
 
     @BeforeEach
     public void setUp() {
-    	questionService = mock(QuestionService.class);
-        personService = mock(PersonService.class);
+    	repository = new CsvPeopleRepository(csvResource());
+    	questionService = new QuestionService(repository);
+        personService = new PersonService(repository);
         session = mock(HttpSession.class);
         model = mock(Model.class);
 
-        mainController = new MainController(questionService, personService);
+        mainController = new MainController(questionService, personService, repository);
     }
 
     @Test
