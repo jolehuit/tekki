@@ -1,6 +1,6 @@
 **Spécifications**
 
-<img title="a title" alt="Alt text" src="https://github.com/jolehuit/tekki/blob/master/DiagrammeFLUX.png">
+<img title="a title" alt="Alt text" src="https://github.com/jolehuit/tekki/blob/master/DiagrammeFlux1.png">
 
 ***Flux Utilisateur***
 
@@ -25,6 +25,89 @@
 4. *Page Résultat :*
    - L'application affiche si le joueur a gagné ou perdu et le score final.
    - Le joueur peut cliquer sur "Rejouer" pour recommencer le jeu.
+  
+     
+
+  
+
+### Spécifications Fonctionnelles Détaillées
+
+#### Page d’Accueil
+
+- **Joueur :**
+  - Cliquer sur le bouton "Commencer".
+
+- **Application :**
+  - Lorsque le joueur clique sur "Commencer" :
+    - Initialiser un compteur de points à 150 points pour le joueur.
+    - Choisir aléatoirement un personnage existant dans la base de données.
+    - Filtrer 20 questions et réponses ciblées sur ce personnage depuis la base de données.
+    - Rediriger le joueur vers la page des questions.
+
+#### Page de Jeu (Page des Questions)
+
+- **Application :**
+  - Afficher les 20 questions filtrées sous forme d'éléments dans une liste déroulante.
+  - Afficher le compteur de points initialisé à 150 points.
+  - Afficher une zone de texte vide pour la réponse.
+  - Afficher un bouton "Je pose la question".
+  - Afficher un bouton "Je veux deviner Tekki".
+
+- **Joueur :**
+  - Sélectionner une question dans la liste déroulante.
+  - Cliquer sur le bouton "Je pose la question".
+
+- **Application :**
+  - Lorsqu'une question est sélectionnée et le bouton "Je pose la question" est cliqué :
+    - Déduire 10 points du compteur de points.
+    - Afficher la réponse correspondante à la question sélectionnée dans la zone de texte.
+    - Mettre à jour l'affichage du compteur de points avec le nouveau score.
+
+- **Joueur :**
+  - Cliquer sur le bouton "Je veux deviner Tekki".
+
+- **Application :**
+  - Lorsqu'il clique sur le bouton "Je veux deviner Tekki" :
+    - Rediriger le joueur vers la page deviner.
+
+#### Page de Jeu (Page Deviner)
+
+- **Application :**
+  - Afficher une liste déroulante contenant le personnage choisi initialement et 9 autres personnages choisis aléatoirement.
+  - Afficher le compteur de points actuel.
+  - Afficher un bouton "Je devine !".
+
+- **Joueur :**
+  - Sélectionner un personnage dans la liste déroulante.
+  - Cliquer sur le bouton "Je devine !".
+
+- **Application :**
+  - Lorsqu'un personnage est sélectionné et le bouton "Je devine !" est cliqué :
+    - Si la réponse est incorrecte :
+      - Déduire 20 points du compteur de points.
+      - Retirer le personnage sélectionné de la liste déroulante.
+      - Mettre à jour l'affichage du compteur de points avec le nouveau score.
+      - Si le score atteint 0 points, rediriger le joueur vers la page résultat avec un message de défaite.
+    - Si la réponse est correcte :
+      - Rediriger le joueur vers la page résultat avec un message de victoire.
+
+#### Page Résultat
+
+- **Application :**
+  - Afficher un message indiquant si le joueur a gagné ou perdu.
+    - Si le joueur a gagné : "Bravo ! Tu as deviné correctement !"
+    - Si le joueur atteint le score égale à 0 : "Désolé, tu as perdu. Ton score est de zéro."
+    - Si le joueur à posé tout les questions : "Désolé, tu as perdu. Il ne reste plus de questions"
+  - Afficher le nombre de points restants.
+  - Afficher un bouton "Réjouer".
+
+- **Joueur :**
+  - Cliquer sur le bouton "Rejouer".
+
+- **Application :**
+  - Lorsqu'il clique sur le bouton "Réjouer" :
+    - Rediriger le joueur vers la page d'accueil.
+
 
 
 
