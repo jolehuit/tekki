@@ -7,7 +7,7 @@
 1. *Page d’Accueil :*
    - Le joueur clique sur "Commencer".
    - L'application initialise le compteur à 150 points pour le joueur.
-   - L'application sélectionne un personnage aléatoire et filtre les questions.
+   - L'application sélectionne un personnage célèbres aléatoire et filtre les questions et ses reponses 
 
 2. *Page des Questions :*
    - Le joueur voit une liste déroulante de questions.
@@ -40,7 +40,7 @@
 - **Application :**
   - Lorsque le joueur clique sur "Commencer" :
     - Initialiser un compteur de points à 150 points pour le joueur.
-    - Choisir aléatoirement un personnage existant dans la base de données.
+    - Choisir aléatoirement un personnage célèbres parmi 100 personnages existant dans la base de données.
     - Filtrer 20 questions et réponses ciblées sur ce personnage depuis la base de données.
     - Rediriger le joueur vers la page des questions.
 
