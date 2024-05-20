@@ -165,7 +165,7 @@ public class TekkiCsvPeopleRepositoryTests {
                 Optional.of("Scar on left cheek"),
                 Optional.of("Tattoo on right arm"),
                 Optional.empty()
-        );
+        ); 
     	
     	assertTrue(repository.verifyGuess("12345", person));
     	assertFalse(repository.verifyGuess("54879", person));
