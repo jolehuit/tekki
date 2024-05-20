@@ -1,15 +1,30 @@
-**Spécifications fonctionnelles**
+**Spécifications**
 
-Sur la page d'accueil, le joueur doit saisir son nom avant de commencer une partie.
 
-Une fois que le joueur a cliqué sur "commencer", l'application doit choisir un des personnages puis proposer les questions et les réponses correspondant à ce personnage pour aider le joueur à deviner le personnage.
 
-Dans un deuxième bloc, l'application affiche 19 personnages aléatoires en plus du personnage choisi par elle.
+***Flux Utilisateur***
 
-Chaque fois que le joueur sélectionne une question, l'application ajoute 1 point sous son nom.
+1. *Page d’Accueil :*
+   - Le joueur clique sur "Commencer".
+   - L'application initialise le compteur à 150 points pour le joueur.
+   - L'application sélectionne un personnage aléatoire et filtre les questions.
 
-S'il veut regarder une autre question, il sera redirigé vers la liste des questions sans les questions qui ont déjà été ouvertes par le joueur.
+2. *Page des Questions :*
+   - Le joueur voit une liste déroulante de questions.
+   - Le joueur sélectionne une question et clique sur "Je pose la question".
+   - L'application déduit 10 points et affiche la réponse.
+   - Le joueur clique sur "Je veux deviner Tekki" pour passer à la phase de devinette.
 
-Si le joueur connaît le personnage choisi par l'application, il peut le deviner en sélectionnant le personnage dans la liste des personnages.
+3. *Page Deviner :*
+   - Le joueur voit une liste déroulante de 10 personnages.
+   - Le joueur sélectionne un personnage et clique sur "Je devine !".
+   - Si incorrect, l'application déduit 20 points et retire le personnage de la liste.
+   - Si le score atteint 0 points, le joueur est redirigé vers la page résultat.
+   - Si correct, le joueur est redirigé vers la page résultat.
 
-Chaque fois que joueur choisit le mauvais personnage, l'application lui ajoute 2 points en plus sous son nom.
+4. *Page Résultat :*
+   - L'application affiche si le joueur a gagné ou perdu et le score final.
+   - Le joueur peut cliquer sur "Rejouer" pour recommencer le jeu.
+
+
+
