@@ -61,20 +61,6 @@ public class TekkiMainControllerTests {
         MockitoAnnotations.initMocks(this);
     }
     
-    /*public Resource csvResource() {
-        return new ClassPathResource("people.csv");
-    }*/
-
-    /*@Before
-    public void setUp() {
-    	repository = new CsvPeopleRepository(csvResource());
-    	questionService = new QuestionService(repository);
-        personService = new PersonService(repository);
-        session = mock(HttpSession.class);
-        model = mock(Model.class);
-
-        mainController = new MainController(questionService, personService, repository);
-    }*/
 
     @Test
     public void testShowGamePage() {
