@@ -1,6 +1,6 @@
 **Spécifications**
 
-
+<img title="a title" alt="Alt text" src="https://github.com/jolehuit/tekki/blob/master/DiagrammeFLUX.png">
 
 ***Flux Utilisateur***
 
@@ -25,6 +25,8 @@
 4. *Page Résultat :*
    - L'application affiche si le joueur a gagné ou perdu et le score final.
    - Le joueur peut cliquer sur "Rejouer" pour recommencer le jeu.
+
+
 
 
 
