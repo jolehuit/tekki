@@ -18,6 +18,7 @@ public class TekkiQuestionTests {
             "12345",
             "Alice",
             'F',
+            "Pompier",
             LocalDate.of(1990, 5, 15),
             31,
             "French",
@@ -25,8 +26,8 @@ public class TekkiQuestionTests {
             "Paris",
             Optional.of(165),
             Optional.of(60),
-            "Brown",
-            "Blonde",
+            Optional.of("Brown"),
+            Optional.of("Blonde"),
             Optional.of(LocalDate.of(2024, 5, 15)),
             Optional.of("Scar on left cheek"),
             Optional.of("Tattoo on right arm"),
@@ -37,6 +38,7 @@ public class TekkiQuestionTests {
                 "12345",
                 "Alice",
                 'F',
+                "Pompier",
                 LocalDate.of(1990, 5, 15),
                 0,
                 "French",
@@ -44,8 +46,8 @@ public class TekkiQuestionTests {
                 "Paris",
                 Optional.empty(),
                 Optional.empty(),
-                "Brown",
-                "Blonde",
+                Optional.of("Brown"),
+                Optional.of("Blonde"),
                 Optional.empty(),
                 Optional.empty(),
                 Optional.empty(),
@@ -112,8 +114,20 @@ public class TekkiQuestionTests {
         question = new Question(20, "", "particularity3");
         assertTrue(question.matches(person2, ""));
         
-        question = new Question(20, "", "particularity4");
+        question = new Question(21, "", "particularity4");
         assertFalse(question.matches(person, "Beau"));
+        
+        question = new Question(22, "", "profession");
+        assertTrue(question.matches(person, "Pompier"));
+        
+        question = new Question(23, "", "birthday");
+        assertTrue(question.matches(person, "15/05/1990"));
+        
+        question = new Question(25, "", "name");
+        assertTrue(question.matches(person, "Alice"));
+        
+        question = new Question(26, "", "id");
+        assertTrue(question.matches(person, "12345"));
     }
 
 }

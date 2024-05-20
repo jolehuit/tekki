@@ -5,6 +5,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -22,6 +23,7 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.support.SessionStatus;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -50,6 +52,9 @@ public class TekkiMainControllerTests {
 
     @Mock
     private HttpSession session;
+    
+    @Mock
+    private SessionStatus status;
 
     @Before
     public void setUp() {
@@ -83,6 +88,7 @@ public class TekkiMainControllerTests {
         int questionId = 1;
         List<Question> questions = new ArrayList<>();
         Question selectedQuestion = new Question(questionId, "Quelle est la couleur de ses yeux ?", "eyeColor");
+        questions.add(selectedQuestion);
         Person selectedPerson = new Person(
                 "12345",
                 "Alice",
@@ -102,8 +108,9 @@ public class TekkiMainControllerTests {
                 Optional.of("Tattoo on right arm"),
                 Optional.empty()
         ); // Replace with actual Person object
-
-        when(session.getAttribute("questions")).thenReturn(questions);
+        
+        when(session.getAttribute("points")).thenReturn(100);
+        when(session.getAttribute("filteredQuestions")).thenReturn(questions);
         when(questionService.getAllQuestions()).thenReturn(questions);
         when(session.getAttribute("selectedPerson")).thenReturn(selectedPerson);
         when(csvPeopleRepository.getPropertyByQuestion(selectedPerson, selectedQuestion)).thenReturn("Sample property value");
@@ -120,14 +127,37 @@ public class TekkiMainControllerTests {
         
         String result2 = mainController.askQuestion(questionId, model, session);
 
-        assertEquals("game", result);
+        assertEquals("game", result2);
     }
     
     @Test
     public void testStartGuessing() {
-    	assertEquals(mainController.startGuessing(model, session), "guess");
+    	assertEquals(mainController.startGuessing(model, session), "redirect:/");
+    	
+    	when(session.getAttribute("gamePageVisited")).thenReturn(true);
+    	when(session.getAttribute("randomPeople")).thenReturn(null);
+    	String result = mainController.startGuessing(model, session);
+    	
+    	assertEquals("guess", result);
     }
     
+    @Test
+    public void testSubmitGuess() {
+    	when(session.getAttribute("selectedPersonId")).thenReturn(null);
+    	String result = mainController.submitGuess("", model, session);
+    	assertEquals(result, "redirect:/");
+    	
+    	//when(session.getAttribute("selectedPersonId")).thenReturn("taylor-swift");
+    	String result2 = mainController.submitGuess("taylor-swift", model, session);
+    	verify(model, times(1)).addAttribute("guessResult", "Bravo ! Tu as deviné correctement !");
+    	assertEquals(result2, "redirect:/game");
+    	
+    	
+    }
     
+    @Test
+    public void testshowHomePage() {
+    	assertEquals(mainController.showHomePage(session, status), "tekki");
+    }
 
 }
