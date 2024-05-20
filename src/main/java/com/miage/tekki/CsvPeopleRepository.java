@@ -45,22 +45,23 @@ public class CsvPeopleRepository {
             String id = getValue(metadata, 0);
             String name = getValue(metadata, 1);
             char sex = getValue(metadata, 2).charAt(0);
-            LocalDate birthday = LocalDate.parse(getValue(metadata, 3), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-            int age = Integer.parseInt(getValue(metadata, 4));
-            String nationality = getValue(metadata, 5);
-            String zodiac = getValue(metadata, 6);
-            String birthPlace = getValue(metadata, 7);
-            Optional<Integer> heightInCm = parseInteger(getValue(metadata, 8));
-            Optional<Integer> weightInKg = parseInteger(getValue(metadata, 9));
-            String eyeColor = getValue(metadata, 10);
-            String hairColor = getValue(metadata, 11);
-            Optional<LocalDate> deathDate = parseDate(getValue(metadata, 12));
-            Optional<String> particularity1 = parseOptional(getValue(metadata, 13));
-            Optional<String> particularity2 = parseOptional(getValue(metadata, 14));
-            Optional<String> particularity3 = parseOptional(getValue(metadata, 15));
+            String profession = getValue(metadata, 3);
+            LocalDate birthday = LocalDate.parse(getValue(metadata, 4), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            int age = Integer.parseInt(getValue(metadata, 5));
+            String nationality = getValue(metadata, 6);
+            String zodiac = getValue(metadata, 7);
+            String birthPlace = getValue(metadata, 8);
+            Optional<Integer> heightInCm = parseInteger(getValue(metadata, 9));
+            Optional<Integer> weightInKg = parseInteger(getValue(metadata, 10));
+            String eyeColor = getValue(metadata, 11);
+            String hairColor = getValue(metadata, 12);
+            Optional<LocalDate> deathDate = parseDate(getValue(metadata, 13));
+            Optional<String> particularity1 = parseOptional(getValue(metadata, 14));
+            Optional<String> particularity2 = parseOptional(getValue(metadata, 15));
+            Optional<String> particularity3 = parseOptional(getValue(metadata, 16));
 
-            return new Person(id, name, sex, birthday, age, nationality, zodiac, birthPlace,
-                    heightInCm, weightInKg, eyeColor, hairColor, deathDate,
+            return new Person(id, name, sex, profession, birthday, age, nationality, zodiac, birthPlace,
+                    heightInCm, weightInKg, Optional.ofNullable(eyeColor), Optional.ofNullable(hairColor), deathDate,
                     particularity1, particularity2, particularity3);
         } catch (Exception e) {
             System.err.println("Error creating person from metadata: " + String.join(";", metadata));
@@ -134,7 +135,7 @@ public class CsvPeopleRepository {
     public String getPropertyByQuestion(Person person, Question question) {
         switch (question.property()) {
             case "eyeColor":
-                return person.eyeColor();
+                return person.eyeColor().orElse(null);
             case "age":
                 return String.valueOf(person.age());
             case "heightInCm":
@@ -150,7 +151,7 @@ public class CsvPeopleRepository {
             case "birthPlace":
                 return person.birthPlace();
             case "hairColor":
-                return person.hairColor();
+                return person.hairColor().orElse(null);
             case "deathDate":
                 return person.deathDate().map(Object::toString).orElse(null);
             case "particularity1":
@@ -159,6 +160,14 @@ public class CsvPeopleRepository {
                 return person.particularity2().orElse(null);
             case "particularity3":
                 return person.particularity3().orElse(null);
+            case "profession":
+                return person.profession();
+            case "birthday":
+                return person.birthday().toString();
+            case "name":
+                return person.name();
+            case "id":
+                return person.id();
             default:
                 return null;
         }

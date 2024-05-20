@@ -3,18 +3,16 @@ package com.miage.tekki;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.support.SessionStatus;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Controller
-@SessionAttributes({"score", "questions", "selectedPerson", "selectedQuestion"})
+@SessionAttributes({"points", "questions", "selectedPerson", "selectedQuestion"})
 public class MainController {
-
     private final QuestionService questionService;
     private final PersonService personService;
     private final CsvPeopleRepository csvPeopleRepository;
@@ -25,19 +23,43 @@ public class MainController {
         this.csvPeopleRepository = csvPeopleRepository;
     }
 
+    @GetMapping("/")
+    public String showHomePage(HttpSession session, SessionStatus status) {
+        status.setComplete();
+        session.invalidate();
+        return "tekki";
+    }
+
     @GetMapping("/game")
     public String showGamePage(Model model, HttpSession session) {
-        session.setAttribute("score", 0);
-        List<Question> allQuestions = questionService.getAllQuestions();
-        Person selectedPerson = personService.getRandomPerson();
-        session.setAttribute("selectedPerson", selectedPerson);
+        Boolean gamePageVisited = (Boolean) session.getAttribute("gamePageVisited");
+        if (gamePageVisited == null || !gamePageVisited) {
+            session.setAttribute("gamePageVisited", true);
+            session.setAttribute("points", 150);
+        }
 
-        List<Question> filteredQuestions = allQuestions.stream()
-                .filter(question -> {
-                    String propertyValue = csvPeopleRepository.getPropertyByQuestion(selectedPerson, question);
-                    return propertyValue != null && !propertyValue.isEmpty() && !propertyValue.equals("–");
-                })
-                .collect(Collectors.toList());
+        Integer points = (Integer) session.getAttribute("points");
+        if (points == null) {
+            points = 150;
+            session.setAttribute("points", points);
+        }
+        model.addAttribute("points", points);
+
+        List<Question> filteredQuestions = (List<Question>) session.getAttribute("filteredQuestions");
+        if (filteredQuestions == null || filteredQuestions.isEmpty()) {
+            List<Question> allQuestions = questionService.getAllQuestions();
+            Person selectedPerson = personService.getRandomPerson();
+            session.setAttribute("selectedPerson", selectedPerson);
+
+            filteredQuestions = allQuestions.stream()
+                    .filter(question -> {
+                        String propertyValue = csvPeopleRepository.getPropertyByQuestion(selectedPerson, question);
+                        return propertyValue != null && !propertyValue.isEmpty() && !propertyValue.equals("–");
+                    })
+                    .collect(Collectors.toList());
+
+            session.setAttribute("filteredQuestions", filteredQuestions);
+        }
 
         model.addAttribute("questions", filteredQuestions);
         return "game";
@@ -46,50 +68,71 @@ public class MainController {
     @PostMapping("/askQuestion")
     public String askQuestion(@RequestParam("questionId") int questionId,
                               Model model, HttpSession session) {
+        int points = (int) session.getAttribute("points");
+        points -= 10;
+        if (points < 0) {
+            points = 0;
+        }
+        session.setAttribute("points", points);
 
-        List<Question> questions = (List<Question>) session.getAttribute("questions");
-
-        // Vérifier si la liste des questions est null
-        if (questions == null) {
-            // Si c'est le cas, initialisez-la avec toutes les questions disponibles
-            questions = questionService.getAllQuestions();
-            session.setAttribute("questions", questions);
+        if (points == 0) {
+            model.addAttribute("guessResult", "Désolé, tu as perdu. Ton score est de zéro.");
+            model.addAttribute("points", points);
+            return "result";
         }
 
-        // Récupérer la question sélectionnée
+        model.addAttribute("points", points);
+
+        List<Question> questions = (List<Question>) session.getAttribute("filteredQuestions");
+
+        if (questions == null || questions.isEmpty()) {
+            return "redirect:/guess";
+        }
+
         Question selectedQuestion = questions.stream().filter(q -> q.id() == questionId).findFirst().orElse(null);
 
         if (selectedQuestion != null) {
-            System.out.println("Selected Question: " + selectedQuestion);
             Person selectedPerson = (Person) session.getAttribute("selectedPerson");
 
             if (selectedPerson != null) {
-                // Obtenir la réponse à partir du CSV
                 String propertyValue = csvPeopleRepository.getPropertyByQuestion(selectedPerson, selectedQuestion);
 
                 if (propertyValue != null) {
-                    // Afficher la réponse
                     model.addAttribute("selectedQuestion", selectedQuestion);
                     model.addAttribute("selectedPersonProperty", propertyValue);
                 }
             }
 
-            // Conserver la question sélectionnée dans le modèle pour qu'elle soit disponible lors du rendu de la page
             model.addAttribute("selectedQuestionText", selectedQuestion.text());
-
-            // Supprimer la question de la liste des questions
             questionService.removeQuestion(questions, questionId);
             model.addAttribute("questions", questions);
+
+            if (questions.isEmpty()) {
+                return "redirect:/guess";
+            }
         }
         return "game";
     }
 
-    @PostMapping("/guess")
+    @GetMapping("/guess")
     public String startGuessing(Model model, HttpSession session) {
-        Person selectedPerson = (Person) session.getAttribute("selectedPerson");
+        Boolean gamePageVisited = (Boolean) session.getAttribute("gamePageVisited");
+        if (gamePageVisited == null || !gamePageVisited) {
+            return "redirect:/";
+        }
 
-        List<Person> randomPeople = csvPeopleRepository.selectRandomPeopleIncluding(selectedPerson);
-        session.setAttribute("randomPeople", randomPeople);
+        List<Person> randomPeople = (List<Person>) session.getAttribute("randomPeople");
+        if (randomPeople == null) {
+            Person selectedPerson = (Person) session.getAttribute("selectedPerson");
+            randomPeople = csvPeopleRepository.selectRandomPeopleIncluding(selectedPerson);
+
+            if (!randomPeople.contains(selectedPerson)) {
+                randomPeople.add(selectedPerson);
+            }
+
+            Collections.shuffle(randomPeople);
+            session.setAttribute("randomPeople", randomPeople);
+        }
 
         model.addAttribute("randomPeople", randomPeople);
         return "guess";
@@ -99,17 +142,47 @@ public class MainController {
     public String submitGuess(@RequestParam("selectedPersonId") String selectedPersonId,
                               Model model, HttpSession session) {
         Person personToGuess = (Person) session.getAttribute("selectedPerson");
-        List<Question> questions = (List<Question>) session.getAttribute("questions");
+
+        if (personToGuess == null) {
+            return "redirect:/";
+        }
+
+        List<Question> questions = (List<Question>) session.getAttribute("filteredQuestions");
 
         boolean guessedCorrectly = personToGuess.id().equals(selectedPersonId);
 
         if (guessedCorrectly) {
             model.addAttribute("guessResult", "Bravo ! Tu as deviné correctement !");
         } else {
+            int points = (int) session.getAttribute("points");
+            points -= 20;
+            if (points < 0) {
+                points = 0;
+            }
+            session.setAttribute("points", points);
+            model.addAttribute("points", points);
+
+            if (points == 0) {
+                model.addAttribute("guessResult", "Désolé, tu as perdu. Ton score est de zéro.");
+                return "result";
+            }
+
             if (questions.isEmpty()) {
                 model.addAttribute("guessResult", "Désolé, tu as perdu. Il ne reste plus de questions.");
             } else {
-                model.addAttribute("guessResult", "Désolé, tu as choisi la mauvaise personne. Essaye encore !");
+                List<Person> randomPeople = (List<Person>) session.getAttribute("randomPeople");
+                randomPeople.removeIf(person -> person.id().equals(selectedPersonId));
+
+                List<Question> filteredQuestions = (List<Question>) session.getAttribute("filteredQuestions");
+                filteredQuestions = filteredQuestions.stream()
+                        .filter(question -> {
+                            String propertyValue = csvPeopleRepository.getPropertyByQuestion(personToGuess, question);
+                            return propertyValue != null && !propertyValue.isEmpty() && !propertyValue.equals("–");
+                        })
+                        .collect(Collectors.toList());
+                session.setAttribute("filteredQuestions", filteredQuestions);
+
+                session.setAttribute("randomPeople", randomPeople);
                 return "redirect:/game";
             }
         }

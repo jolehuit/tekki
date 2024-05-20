@@ -13,18 +13,20 @@
 
     <h1>C'est parti ! 🤓</h1>
     <p>Sélectionnez une question à poser :</p>
+    <p>Points actuels : <span th:text="${points}"></span></p>
     <form id="questionsSelect" action="/askQuestion" method="post">
         <select name="questionId">
             <option th:each="question : ${questions}" th:value="${question.id}" th:text="${question.text}"></option>
         </select>
-        <div th:if="${selectedPersonProperty != null}">
-            <span>Voici la réponse à ta question :</span><br/><span th:text="${selectedPersonProperty}"></span>
+        <div class="answer" th:if="${selectedPersonProperty != null}">
+            <span>Voici la réponse à ta question :</span>
+            <span th:text="${selectedPersonProperty}"></span>
         </div>
         <div class="buttons">
             <button class="askButton" type="submit">Je pose la question !</button>
         </div>
     </form>
-    <form id="guessForm" action="/guess" method="post">
+    <form id="guessForm" action="/guess" method="get">
             <button class="guessButton" type="submit">Je veux deviner tekki !</button>
     </form>
 

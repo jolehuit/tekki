@@ -5,9 +5,12 @@
     <title>Guess Page - TEKKI</title>
     <link th:href="@{/styles/guess.css}" rel="stylesheet" />
 </head>
+<video autoplay muted loop id="background-video">
+    <source th:src="@{/background.mp4}" type="video/mp4">
+</video>
 <body>
 <div class="container">
-    <h1>Choisissez la personne</h1>
+    <h1>Vous pensez pouvoir deviner ? 🕵️‍♂️</h1>
     <form id="guessSelect" action="/submitGuess" method="post">
         <select name="selectedPersonId">
             <option th:each="person : ${randomPeople}" th:value="${person.id}" th:text="${person.name}"></option>

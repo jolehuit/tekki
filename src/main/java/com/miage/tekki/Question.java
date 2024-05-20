@@ -2,15 +2,14 @@ package com.miage.tekki;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Optional;
 
 public record Question(int id, String text, String property) {
     public boolean matches(Person person, String expectedAnswer) {
         switch (property) {
             case "eyeColor":
-                return person.eyeColor().equalsIgnoreCase(expectedAnswer);
+                return person.eyeColor().orElse("").equalsIgnoreCase(expectedAnswer);
             case "hairColor":
-                return person.hairColor().equalsIgnoreCase(expectedAnswer);
+                return person.hairColor().orElse("").equalsIgnoreCase(expectedAnswer);
             case "age":
                 try {
                     int expectedAge = Integer.parseInt(expectedAnswer);
@@ -57,6 +56,20 @@ public record Question(int id, String text, String property) {
                 return person.particularity2().orElse("").equalsIgnoreCase(expectedAnswer);
             case "particularity3":
                 return person.particularity3().orElse("").equalsIgnoreCase(expectedAnswer);
+            case "profession":
+                return person.profession().equalsIgnoreCase(expectedAnswer);
+            case "birthday":
+                try {
+                    LocalDate expectedBirthday = LocalDate.parse(expectedAnswer, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+                    return person.birthday().equals(expectedBirthday);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    return false;
+                }
+            case "name":
+                return person.name().equalsIgnoreCase(expectedAnswer);
+            case "id":
+                return person.id().equalsIgnoreCase(expectedAnswer);
             default:
                 return false;
         }

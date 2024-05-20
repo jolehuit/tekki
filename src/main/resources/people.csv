@@ -1,101 +1,100 @@
-﻿NOM LIEN;NOM;Sexe;Anniversaire;Âge;Nationalité;Zodiaque;Lieu de naissance;Centimètre;Kilogramme;Couleur des yeux;Couleur des cheveux;Décès;Particularité 1;Particularité 2;Particularité 3
-joseph-quinn;Joseph Quinn;M;15/05/1993;30;Britannique;–;Angleterre;178;–;Brun;Brun;–;joue Eddie Munson-Stranger Things s4;joue Koner-Game of Thrones s7;joue Eric-Sans un bruit
-emma-d-arcy;Emma D'Arcy;F;27/06/1992;31;Britannique;–;Royaume-Uni;173;–;Bleu;Brun;–;joue Rhaenyra Targaryen-House of the Dragon;Non binaire;Beaux Arts- Ruskin School of Art
-ji-soo;Ji Soo;M;30/03/1993;30;Sud-Coréen;–;Corée du Sud;186;–;Brun foncé;Noirs;–;joue dans KDrama My First First Love;joue dans Kdrama Angry Mom;
-milly-alcock;Milly Alcock;F;11/04/2000;23;Australienne;–;Australie;–;–;Verts;Brun;–;Jue Rhaenyra Targaryen jeune-House of the Dragon;;
-kim-kardashian;Kim Kardashian;F;21/10/1980;43;Américaine;Balance;États-Unis;159;53;Brun foncé;Brun;–;Amie et styiste de Paris Hilton;Montée en célébrité après une sextape ayant fuitée;Fondatrice de la société de sous-vêtements et vêtements modelants Skims
-ariana-grande;Ariana Grande;F;26/06/1993;30;Américaine;Cancer;États-Unis;155;43;Brun foncé;Brun foncé;–;joue Cat Valentine-Victorious;sort un single en 2013 en duo avec Mac Miller;Désignée « Femme de l'année » en 2018 par Billboard
-rihanna;Rihanna;F;20/02/1988;36;Barbadienne;Poissons;Barbade;173;61;–;Noirs;–;s'est produite lors du  spectacle de la mi-temps du Super Bowl 2023;élue la 15e meilleure artiste de tous les temps selon Billboard en 2013;fondatrice de Fenty Beauty
-taylor-swift;Taylor Swift;F;13/12/1989;34;Américaine;Sagittaire;États-Unis;181;57;Bleu;Blonds;–;sort un premier album country à 16 ans; seule artiste vivante ayant cinq albums  dans le top 10 du Billboard 200 en 2023;désignée « personnalité de l'année » par le magazine  Time en 2023
-lebron-james;Lebron James;M;30/12/1984;39;Américaine;Capricorne;États-Unis;202;109;Brun;Noirs;–;joueur des Lakers de Los Angeles;élu sportif masculin de la décennie par l'Associated Press;
-billie-eilish;Billie Eilish;F;18/12/2001;22;Américaine;Sagittaire;États-Unis;161;56;Bleu;Blonds;–;;;
-camila-cabello;Camila Cabello;F;03/03/1997;27;Cubaine/Américaine/Mexicaine;Poissons;Cuba;158;50;Brun foncé;Brun foncé;–;;;
-ashley-graham;Ashley Graham;F;30/10/1987;36;Américaine;Scorpion;États-Unis;176;86;Brun foncé;Brun foncé;–;;;
-anne-hathaway;Anne Hathaway;F;12/11/1982;41;Américaine;Scorpion;États-Unis;172;57;Brun foncé;Brun foncé;–;;;
-kelly-clarkson;Kelly Clarkson;F;24/04/1982;41;Américaine;Taureau;États-Unis;160;78;Noisette;Noirs;–;;;
-keira-knightley;Keira Knightley;F;26/03/1985;38;Britannique;Bélier;Angleterre;169;55;Brun foncé;Brun foncé;–;;;
-kate-beckinsale;Kate Beckinsale;F;26/07/1973;50;Britannique/Américaine;Lion;Angleterre;171;53;Noisette;Châtain;–;;;
-tom-holland;Tom Holland;M;01/06/1996;27;Britannique;Gémeaux;Angleterre;173;65;Brun foncé;Brun foncé;–;;;
-mila-kunis;Mila Kunis;F;14/08/1983;40;Américaine;Lion;Ukraine;163;53;Verts, bleu;Brun foncé;–;;;
-bradley-cooper;Bradley Cooper;M;05/01/1975;49;Américaine;Capricorne;États-Unis;185;83;Bleu;Châtain;–;;;
-sophie-turner;Sophie Turner;F;21/02/1996;28;Britannique;Poissons;Angleterre;175;64;Verts;Blonds;–;;;
-cameron-diaz;Cameron Diaz;F;30/08/1972;51;Américaine;Vierge;États-Unis;176;57;Bleu;Blonds;–;;;
-rami-malek;Rami Malek;M;12/05/1981;42;Américaine/Égyptienne;Taureau;États-Unis;176;69;Verts;Noirs;–;;;
-selena-gomez;Selena Gomez;F;22/07/1992;31;Américaine;Cancer;États-Unis;164;53;Brun foncé;Noirs;–;;;
-scarlett-johansson;Scarlett Johansson;F;22/11/1984;39;Américaine/Danoise;Sagittaire;États-Unis;160;56;Verts;Brun;–;;;
-kendall-jenner;Kendall Jenner;F;03/11/1995;28;Américaine;Scorpion;États-Unis;177;59;Brun foncé;Brun foncé;–;;;
-jennifer-lawrence;Jennifer Lawrence;F;15/08/1990;33;Américaine;Lion;États-Unis;174;62;Bleu;Blonds;–;;;
-meghan-markle;Meghan Markle;F;04/08/1981;42;Américaine;Lion;États-Unis;169;60;Brun foncé;Brun foncé;–;;;
-kylie-jenner;Kylie Jenner;F;10/08/1997;26;Américaine;Lion;États-Unis;169;63;Brun foncé;Noirs;–;;;
-gigi-hadid;Gigi Hadid;F;23/04/1995;28;Américaine;Taureau;États-Unis;178;59;Verts, bleu;Blonds;–;;;
-nicki-minaj;Nicki Minaj;F;08/12/1982;41;Trinidadienne/Américaine;Sagittaire;Trinité-et-Tobago;157;63;Brun foncé;Noirs;–;;;
-cristiano-ronaldo;Cristiano Ronaldo;M;05/02/1985;39;Portugaise;Verseau;Portugal;187;84;Brun clair;Brun foncé;–;;;
-neymar;Neymar;M;05/02/1992;32;Brésilien;Verseau;Brésil;174;68;Noisette;Brun foncé;–;;;
-chris-hemsworth;Chris Hemsworth;M;11/08/1983;40;Australienne;Lion;Australie;190;90;Bleu;Blonds;–;;;
-beyonce;Beyonce;F;04/09/1981;42;Américaine;Vierge;États-Unis;168;61;Brun foncé;Brun foncé;–;;;
-jennifer-aniston;Jennifer Aniston;F;11/02/1969;55;Américaine;Verseau;États-Unis;163;52;Bleu;Brun;–;;;
-jennifer-lopez;Jennifer Lopez;F;24/07/1969;54;Américaine;Lion;États-Unis;164;58;Brun clair;Châtain;–;;;
-shakira;Shakira;F;02/02/1977;47;Colombienne;Verseau;Colombie;156;54;Brun foncé;Noirs;–;;;
-lady-gaga;Lady Gaga;F;28/03/1986;37;Américaine;Bélier;États-Unis;156;54;Noisette;Brun;–;;;
-arnold-schwarzenegger;Arnold Schwarzenegger;M;30/07/1947;76;Autrichienne/Américaine;Lion;Autriche;188;105;Bleu;Châtain;–;;;
-priyanka-chopra;Priyanka Chopra;F;18/07/1982;41;Indienne;Cancer;Inde;169;61;Brun foncé;Brun foncé;–;;;
-vin-diesel;Vin Diesel;M;18/07/1967;56;Américaine;Cancer;États-Unis;183;102;Brun foncé;Aucun cheveux;–;;;
-jason-statham;Jason Statham;M;12/09/1967;56;Britannique;Vierge;Angleterre;179;85;Noisette;Noirs;–;;;
-zac-efron;Zac Efron;M;18/10/1987;36;Américaine;Balance;États-Unis;174;74;Bleu;Châtain;–;;;
-brad-pitt;Brad Pitt;M;18/12/1963;60;Américaine;Sagittaire;États-Unis;180;77;Bleu;Blonds;–;;;
-justin-bieber;Justin Bieber;M;01/03/1994;30;Canadienne;Poissons;Canada;175;66;Brun clair;Châtain;–;;;
-lionel-messi;Lionel Messi;M;24/06/1987;36;Argentine/Espagnole;Cancer;Argentine;170;67;Brun foncé;Brun foncé;–;;;
-tom-cruise;Tom Cruise;M;03/07/1962;61;Américaine;Cancer;États-Unis;170;66;Verts;Brun foncé;–;;;
-jason-momoa;Jason Momoa;M;01/08/1979;44;Américaine;Lion;États-Unis;194;107;Verts;Brun foncé;–;;;
-donald-trump;Donald Trump;M;14/06/1946;77;Américaine;Gémeaux;États-Unis;188;97;Brun;Gris;–;;;
-angelina-jolie;Angelina Jolie;F;04/06/1975;48;Américaine/Cambodgienne;Gémeaux;États-Unis;168;53;Gris;Brun foncé;–;;;
-emma-watson;Emma Watson;F;15/04/1990;33;Britannique;Bélier;France;166;52;Brun clair;Châtain;–;;;
-megan-fox;Megan Fox;F;16/05/1986;37;Américaine;Taureau;États-Unis;162;52;Bleu;Brun foncé;–;;;
-salma-hayek;Salma Hayek;F;02/09/1966;57;Mexicaine/Américaine/Libanaise;Vierge;Mexique;158;53;Brun foncé;Noirs;–;;;
-demi-lovato;Demi Lovato;F;20/08/1992;31;Américaine;Lion;États-Unis;160;58;Brun foncé;Brun;–;;;
-katy-perry;Katy Perry;F;25/10/1984;39;Américaine;Scorpion;États-Unis;174;62;Bleu;Blonds;–;;;
-miley-cyrus;Miley Cyrus;F;23/11/1992;31;Américaine;Sagittaire;États-Unis;165;49;Bleu;Noirs;–;;;
-charlize-theron;Charlize Theron;F;07/08/1975;48;Sud-Africaine/Américaine;Lion;Afrique du Sud;176;54;Verts;Brun;–;;;
-natalie-portman;Natalie Portman;F;09/06/1981;42;Israélienne/Américaine;Gémeaux;Israël;161;49;Brun clair;Châtain;–;;;
-emily-ratajkowski;Emily Ratajkowski;F;07/06/1991;32;Américaine;Gémeaux;Angleterre;172;55;Brun foncé;Brun foncé;–;;;
-dwayne-johnson;Dwayne Johnson;M;02/05/1972;51;Américaine/Canadienne;Taureau;États-Unis;195;118;Brun foncé;Brun foncé;–;;;
-nicole-kidman;Nicole Kidman;F;20/06/1967;56;Australienne/Américaine;Gémeaux;États-Unis;180;57;Bleu;Roux;–;;;
-dua-lipa;Dua Lipa;F;22/08/1995;28;Britannique/Albanaise;Lion;Angleterre;173;62;Brun clair;Brun foncé;–;;;
-emilia-clarke;Emilia Clarke;F;23/10/1986;37;Britannique;Scorpion;Angleterre;158;51;Verts;Brun foncé;–;;;
-will-smith;Will Smith;M;25/09/1968;55;Américaine;Balance;États-Unis;188;81;Brun foncé;Noirs;–;;;
-hugh-jackman;Hugh Jackman;M;12/10/1968;55;Australienne;Balance;Australie;188;81;Brun clair;Brun foncé;–;;;
-johnny-depp;Johnny Depp;M;09/06/1963;60;Américaine;Gémeaux;États-Unis;178;79;Brun foncé;Brun foncé;–;;;
-tom-hardy;Tom Hardy;M;15/09/1977;46;Britannique;Vierge;Angleterre;175;77;Bleu;Brun foncé;–;;;
-ronaldo;Ronaldo;M;22/09/1976;47;Brésilienne;Vierge;Brésil;183;80;Brun foncé;Brun foncé;–;;;
-sylvester-stallone;Sylvester Stallone;M;06/07/1946;77;Américaine;Cancer;États-Unis;178;101;Brun foncé;Brun foncé;–;;;
-ben-affleck;Ben Affleck;M;15/08/1972;51;Américaine;Lion;États-Unis;191;97;Noisette;Brun foncé;–;;;
-kevin-hart;Kevin Hart;M;06/07/1979;44;Américaine;Cancer;États-Unis;156;63;Brun foncé;Noirs;–;;;
-bruno-mars;Bruno Mars;M;08/10/1985;38;Américaine;Balance;États-Unis;165;68;Brun foncé;Brun foncé;–;;;
-shawn-mendes;Shawn Mendes;M;08/08/1998;25;Canadien;Lion;Canada;187;86;Brun foncé;Brun foncé;–;;;
-kate-upton;Kate Upton;F;10/06/1992;31;Américaine;Gémeaux;États-Unis;179;63;Bleu;Blonds;–;;;
-blake-lively;Blake Lively;F;25/08/1987;36;Américaine;Vierge;États-Unis;178;64;Bleu;Blonds;–;;;
-kourtney-kardashian;Kourtney Kardashian;F;18/04/1979;44;Américaine;Bélier;États-Unis;152;47;Brun foncé;Noirs;–;;;
-ryan-reynolds;Ryan Reynolds;M;23/10/1976;47;Canadienne/Américaine;Scorpion;Canada;189;85;Noisette;Châtain;–;;;
-christina-hendricks;Christina Hendricks;F;03/05/1975;48;Américaine;Taureau;États-Unis;171;74;Bleu;Roux;–;;;
-jim-carrey;Jim Carrey;M;17/01/1962;62;Canadienne/Américaine;Capricorne;Canada;188;85;Brun foncé;Brun foncé;–;;;
-bruce-willis;Bruce Willis;M;19/03/1955;68;Américaine;Poissons;Allemagne;182;84;Bleu;Aucun cheveux;–;;;
-britney-spears;Britney Spears;F;02/12/1981;42;Américaine;Sagittaire;États-Unis;163;58;Brun clair;Brun;–;;;
-daniel-radcliffe;Daniel Radcliffe;M;23/07/1989;34;Britannique;Lion;Angleterre;167;52;Bleu;Brun foncé;–;;;
-madonna;Madonna;F;16/08/1958;65;Américaine;Lion;États-Unis;165;55;Verts;Brun foncé;–;;;
-nina-dobrev;Nina Dobrev;F;09/01/1989;35;Bulgaro/Canadienne;Capricorne;Bulgarie;169;56;Brun foncé;Brun foncé;–;;;
-sunny-leone;Sunny Leone;F;13/05/1981;42;Canadienne/Américaine;Taureau;Canada;163;53;Brun clair;Noirs;–;;;
-kit-harington;Kit Harington;M;26/12/1986;37;Britannique;Capricorne;Angleterre;173;76;Brun foncé;Brun foncé;–;;;
-kate-middleton;Kate Middleton;F;09/01/1982;42;Britannique;Capricorne;Angleterre;176;54;Verts;Brun foncé;–;;;
-margot-robbie;Margot Robbie;F;02/07/1990;33;Australienne;Cancer;Australie;169;56;Bleu;Blonds;–;;;
-julia-roberts;Julia Roberts;F;28/10/1967;56;Américaine;Scorpion;États-Unis;175;59;Brun clair;Blond foncé;–;;;
-kaley-cuoco;Kaley Cuoco;F;30/11/1985;38;Américaine;Sagittaire;États-Unis;169;57;Verts;Blonds;–;;;
-karlie-kloss;Karlie Kloss;F;03/08/1992;31;Américaine;Lion;États-Unis;186;60;Verts;Châtain;–;;;
-chris-evans-actor;Chris Evans;M;13/06/1981;42;Américaine;Gémeaux;États-Unis;182;89;Bleu;Châtain;–;;;
-michael-jordan;Michael Jordan;M;17/02/1963;61;Américaine;Verseau;États-Unis;198;96;Brun foncé;Aucun cheveux;–;;;
-mark-wahlberg;Mark Wahlberg;M;05/06/1971;52;Américaine;Gémeaux;États-Unis;174;79;Noisette;Brun foncé;–;;;
-ryan-gosling;Ryan Gosling;M;12/11/1980;43;Canadienne;Scorpion;Canada;184;79;Bleu;Blonds;–;;;
-sergio-ramos;Sergio Ramos;M;30/03/1986;37;Espagnole;Bélier;Espagne;182;76;Brun foncé;Châtain;–;;;
-ariel-winter;Ariel Winter;F;28/01/1998;26;Américaine;Verseau;États-Unis;155;56;Brun foncé;Blonds;–;;;
-freddie-mercury;Freddie Mercury;M;05/09/1946;45;Britannique;Vierge;Tanzanie;177;73;Brun foncé;Noirs;24/11/1991;;;
-marilyn-monroe;Marilyn Monroe;F;01/06/2026;36;Américaine;Gémeaux;États-Unis;167;53;Bleu;Blonds;05/08/1962;;;
-michael-jackson;Michael Jackson;M;29/08/1958;50;Américaine;Vierge;États-Unis;175;61;Noir;Noirs;25/06/2009;;;
+﻿NOM LIEN;NOM;Sexe;Profession;Anniversaire;Âge;Nationalité;Zodiaque;Lieu de naissance;Centimètre;Kilogramme;Couleur des yeux;Couleur des cheveux;Décès;Particularité 1;Particularité 2;Particularité 3
+taylor-swift;Taylor Swift;F;Chanteuse, autrice-compositrice;13/12/1989;34;Américaine;Sagittaire;États-Unis;181;57;Bleu;Blonds;–;sort un premier album country à 16 ans; seule artiste vivante ayant cinq albums  dans le top 10 du Billboard 200 en 2023;désignée « personnalité de l'année » par le magazine  Time en 2023
+rihanna;Rihanna;F;Chanteuse, autrice-compositrice;20/02/1988;36;Barbadienne;Poissons;Barbade;173;61;–;Noirs;–;s'est produite lors du  spectacle de la mi - temps du Super Bowl 2023;élue la 15e meilleure artiste de tous les temps selon Billboard en 2013;fondatrice de Fenty Beauty
+lebron-james;Lebron James;M;Joueur de Basketball;30/12/1984;39;Américaine;Capricorne;États-Unis;202;109;Brun;Noirs;–;joueur des Lakers de Los Angeles;élu sportif masculin de la décennie par l'Associated Press;Principaux postes : Meuneur/Ailier/Ailier fort
+emma-d-arcy;Emma D'Arcy;F;Actrice;27/06/1992;31;Britannique;–;Royaume-Uni;173;–;Bleu;Brun;–;joue Rhaenyra Targaryen - House of the Dragon;personnalité non binaire;a fait les Beaux Arts -  Ruskin School of Art
+milly-alcock;Milly Alcock;F;Actrice;11/04/2000;23;Australienne;Capricorne;Australie;165;45;Verts;Brun;–;Joue Rhaenyra Targaryen jeune - House of the Dragon;Joue Cindi Jackson - Janet King;Joue Isabella Barrett - High Life
+joseph-quinn;Joseph Quinn;M;Acteur;15/05/1993;30;Britannique;–;Angleterre;178;–;Brun;Brun;–;joue Eddie Munson - Stranger Things s4;joue Koner - Game of Thrones s7;joue Eric - Sans un bruit
+ji-soo;Ji Soo;M;Acteur;30/03/1993;30;Sud-Coréen;–;Corée du Sud;186;–;Brun foncé;Noirs;–;joue dans le KDrama My First First Love;joue dans le Kdrama Angry Mom;Lauréat des 11th Max Movie Awards -  Catégorie Rising Star Award
+ariana-grande;Ariana Grande;F;Actrice, Chanteur/euse;26/06/1993;30;Américaine;Cancer;États-Unis;155;43;Brun foncé;Brun foncé;–;joue Cat Valentine - Victorious;sort un single en 2013 en duo avec Mac Miller;Désignée « Femme de l'année » en 2018 par Billboard
+kim-kardashian;Kim Kardashian;F;Personnalité TV;21/10/1980;43;Américaine;Balance;États-Unis;159;53;Brun foncé;Brun;–;Amie et styiste de Paris Hilton;Montée en célébrité après une sextape ayant fuitée;Fondatrice de la société de sous - vêtements et vêtements modelants Skims
+kourtney-kardashian;Kourtney Kardashian;F;Personnalité TV;18/04/1979;44;Américaine;Bélier;États-Unis;152;47;Brun foncé;Noirs;–; a ouvert un magasin pour enfants nommé Smooch;a ouvert, avec ses sœurs une boutique de vêtements nommée DASH;lance son propre site web Beauté et Bien - être, intitulé Poosh en l'honneur de sa fille Penelope
+miley-cyrus;Miley Cyrus;F;Actrice, Chanteur/euse, Auteur-compositeur;23/11/1992;31;Américaine;Sagittaire;États-Unis;165;49;Bleu;Noirs;–;actrice principale de la série Hannah Montana;autrice de la chanson Flowers;autrice de la chanson Wreckin ball
+natalie-portman;Natalie Portman;F;Actrice;09/06/1981;42;Israélienne/Américaine;Gémeaux;Israël;161;49;Brun clair;Châtain;–;a joué à 12 ans dans le film Léon de Luc Besson;obtient le Golden Globe de la meilleure actrice dans un second rôle en 2005;a joué dans Black Swan
+camila-cabello;Camila Cabello;F;Chanteuse;03/03/1997;27;Cubaine/Américaine/Mexicaine;Poissons;Cuba;158;50;Brun foncé;Brun foncé;–;ancienne membre du groupe Fifth Harmony;en couple avec Shawn Mendes de 2019 & 2021;interprète de la chanson Havana
+emilia-clarke;Emilia Clarke;F;Actrice;23/10/1986;37;Britannique;Scorpion;Angleterre;158;51;Verts;Brun foncé;–;joue Rhaenyra Daenerys Targaryen - Game of Thrones;joue Sarah Connor - Terminator Genisys;joue Qi'Ra - Solo: A Star Wars Story
+jennifer-aniston;Jennifer Aniston;F;Actrice;11/02/1969;55;Américaine;Verseau;États-Unis;163;52;Bleu;Brun;–;joue  Rachel Green - Friends;joue Alex Levy - The Morning Show;joue Grace Connelly - Bruce tout-puissant 
+emma-watson;Emma Watson;F;Actrice, Mannequin;15/04/1990;33;Britannique;Bélier;France;166;52;Brun clair;Châtain;–;joue Hermione Granger - Harry Potter;la plus jeune personne à apparaître sur la couverture du magazine Teen Vogue;nommée ambassadrice de bonne volonté par l'ONU Femmes en juillet 2014
+megan-fox;Megan Fox;F;Actrice, Mannequin;16/05/1986;37;Américaine;Taureau;États-Unis;162;52;Bleu;Brun foncé;–;joue  April O'Neil  - Ninja Turtles;joue Mikaela Banes - Transformers;en couple avec Machine Gun Kelly
+daniel-radcliffe;Daniel Radcliffe;M;Acteur;23/07/1989;34;Britannique;Lion;Angleterre;167;52;Bleu;Brun foncé;–;acteur principal de la saga Harry Potter;joue Allen Ginsberg - Kill Your Darlings,;fait publier quatre textes dans le magazine Rubbish en 2007 sous le nom de plume Jacob Gershon
+kate-beckinsale;Kate Beckinsale;F;Actrice, Mannequin;26/07/1973;50;Britannique/Américaine;Lion;Angleterre;171;53;Noisette;Châtain;–;joue Johanna - Liaisons à New York ;joue Dana Barrow - La Chambre des oubliés;joue Christiana Dior - Fool's Paradise 
+mila-kunis;Mila Kunis;F;Actrice;14/08/1983;40;Américaine;Lion;Ukraine;163;53;Verts, bleu;Brun foncé;–;joue Jupiter Jones - Jupiter : Le Destin de l'univers;joue Lori Collins - Ted;joue Solara - Le Livre d'Eli
+selena-gomez;Selena Gomez;F;Actrice, chanteuse;22/07/1992;31;Américaine;Cancer;États-Unis;164;53;Brun foncé;Noirs;–;joue Alexx Russo - Les Sorciers de Waverly Place;quatrième personnalité la plus suivie au monde sur ces réseaux;interprète Taki Taki avec Ozuna
+angelina-jolie;Angelina Jolie;F;Actrice, Ecrivain;04/06/1975;48;Américaine/Cambodgienne;Gémeaux;États-Unis;168;53;Gris;Brun foncé;–;a reçu trois Golden Globes, deux Screen Actors Guild Awards et un Oscar du cinéma.;Divorcée des acteurs Jonny Lee Miller, Billy Bob Thornton et Brad Pitt;Actrice principale de Lara Croft : Tomb Raider
+salma-hayek;Salma Hayek;F;Actrice, Producteur;02/09/1966;57;Mexicaine/Américaine/Libanaise;Vierge;Mexique;158;53;Brun foncé;Noirs;–;épouse François - Henri Pinault à la mairie du 6e arrondissement de Paris;joue Rita Escobar - Wild Wild West;joue Sonia Kincaid - Hitman and Bodyguard
+marilyn-monroe;Marilyn Monroe;F;Actrice, Chanteur/euse, Mannequin;01/06/2026;36;Américaine;Gémeaux;États-Unis;167;53;Bleu;Blonds;05/08/1962;"icône portant sa ""subway dress"" dans Sept ans de réfléxion";reçoit le Golden Globe de la meilleure actrice dans une comédie en 1960;connaîtra  des mariages ratés avec Joe DiMaggio et  Arthur Miller.
+shakira;Shakira;F;Chanteuse, autrice-compositrice;02/02/1977;47;Colombienne;Verseau;Colombie;156;54;Brun foncé;Noirs;–;autrice du titre Whenever, Wherever;nterprète Waka Waka (This Time for Africa) en 2010;a vécu 12 ans avec Gérard Piqué
+lady-gaga;Lady Gaga;F;Chanteuse, autrice-compositrice;28/03/1986;37;Américaine;Bélier;États-Unis;156;54;Noisette;Brun;–;se fait connaitre avec son premier album, The Fame (2008);joue Ally Campana - A Star is Born;est la marraine des deux fils d'Elton John et David Furnish
+charlize-theron;Charlize Theron;F;Actrice, Producteur;07/08/1975;48;Sud-Africaine/Américaine;Lion;Afrique du Sud;176;54;Verts;Brun;–;joue Mary Embrey - Hancock;joue Cipher - Fast and Furious 10;joue Impératrice Furiosa - Mad Max: Fury Road
+kate-middleton;Kate Middleton;F;Royauté;09/01/1982;42;Britannique;Capricorne;Angleterre;176;54;Verts;Brun foncé;–;devient membre de la famille royale britannique le 29 avril 2011;porte le titre de duchesse de Cambridge;épouse de William, prince de Galles
+keira-knightley;Keira Knightley;F;Actrice;26/03/1985;38;Britannique;Bélier;Angleterre;169;55;Brun foncé;Brun foncé;–;premier rôle féminin de Pirates des Caraïbes : La Malédiction du Black Pearl;joue Nell - Silent Hill;joue La Fée Dragée - Casse-Noisette et les Quatre Royaumes
+emily-ratajkowski;Emily Ratajkowski;F;Mannequin;07/06/1991;32;Américaine;Gémeaux;Angleterre;172;55;Brun foncé;Brun foncé;–;apparait dans deux clips : Blurred Lines et Love Somebody;crée une marque de maillots de bain et de sous - vêtements nommée Inamorata en 2017;collabore avec The Kooples avec qui elle crée une ligne de sac à main.
+madonna;Madonna;F;Chanteur/euse, Auteur-compositeur;16/08/1958;65;Américaine;Lion;États-Unis;165;55;Verts;Brun foncé;–;signe chez Sire Records en 1982 et sort son premier album l'année suivante;la chanteuse ayant vendu le plus de disques de tous les temps;autrice des single Holiday, Like a Virgin et Into the Groove
+billie-eilish;Billie Eilish;F;Chanteuse, autrice-compositrice;18/12/2001;22;Américaine;Sagittaire;États-Unis;161;56;Bleu;Blonds;–;sort un premier single, Ocean Eyes, en mars 2016;crée sa marque de vêtements, Blohsh e, mars 2018;autrice du titre Bad Guy
+scarlett-johansson;Scarlett Johansson;F;Actrice, chanteuse;22/11/1984;39;Américaine/Danoise;Sagittaire;États-Unis;160;56;Verts;Brun;–;joue Natasha Romanoff - Black Widow;joue Rebecca - Ghost World;interpréte Janet Leigh dans le biopic Hitchcock
+nina-dobrev;Nina Dobrev;F;Mannequin;09/01/1989;35;Bulgaro/Canadienne;Capricorne;Bulgarie;169;56;Brun foncé;Brun foncé;–;joue Elena Gilbert - The Vampire Diaries;en couple avec Shaun White;joue Candace Kelmeckis -  Le Monde de Charlie
+margot-robbie;Margot Robbie;F;Actrice;02/07/1990;33;Australienne;Cancer;Australie;169;56;Bleu;Blonds;–;joue dans Le Loup de Wall Street aux côtés de Leonardo DiCaprio;joue Harley Quinn - Birds of Prey;joue Sharon Tate - Once Upon a Time... in Hollywood
+ariel-winter;Ariel Winter;F;Actrice;28/01/1998;26;Américaine;Verseau;États-Unis;155;56;Brun foncé;Blonds;–;jour Alex Dunphy - Modern Family;voix originale de Princesse Sofia;a remporté quatre Screen Actors Guild Award et un Gold Derby Awards
+anne-hathaway;Anne Hathaway;F;Actrice, chanteuse;12/11/1982;41;Américaine;Scorpion;États-Unis;172;57;Brun foncé;Brun foncé;–;joue Andrea Sachs - Le diable s'habille en Prada;joue Fantine - Les Misérables;joue Daphne Kluger - Ocean's 8
+cameron-diaz;Cameron Diaz;F;Actrice, productrice;30/08/1972;51;Américaine;Vierge;États-Unis;176;57;Bleu;Blonds;–;joue Tina Carlyle - The Mask;mariée à Benji Madden; prête également sa voix à la princesse Fiona dans Shrek
+nicole-kidman;Nicole Kidman;F;Actrice;20/06/1967;56;Australienne/Américaine;Gémeaux;États-Unis;180;57;Bleu;Roux;–;joue Suzanne Stone Maretto -  Prête à tout;joue Atlanna -  Aquaman;joue Millicent - Paddington
+kaley-cuoco;Kaley Cuoco;F;Actrice;30/11/1985;38;Américaine;Sagittaire;États-Unis;169;57;Verts;Blonds;–;joue Penny - The Big Bang Theory; incarne le rôle principal de la série The Flight Attendant;joue Maggie - The Man from Toronto
+jennifer-lopez;Jennifer Lopez;F;Actrice, chanteuse, danseuse, productrice, fashion designer;24/07/1969;54;Américaine;Lion;États-Unis;164;58;Brun clair;Châtain;–;publie en 1999 son premier album studio, On the 6;considérée comme la plus influente et la mieux payée des artistes latino - américaines;joue Sharon Pogue - Angel Eyes
+demi-lovato;Demi Lovato;F;Chanteur/euse, Auteur-compositeur;20/08/1992;31;Américaine;Lion;États-Unis;160;58;Brun foncé;Brun;–;rôle principal du téléfilm de Disney Channel Camp Rock;fait partie des jurés de l'émission The X Factor entre 2012 et 2013;sort son premier album Don't Forget en 2008
+britney-spears;Britney Spears;F;Chanteur/euse;02/12/1981;42;Américaine;Sagittaire;États-Unis;163;58;Brun clair;Brun;–;signe avec Jive Records en 1997 à l’âge de 15 ans;se fait connaître mondialement en 1998 grâce à son titre ...Baby One More Time;sort son deuxieme album Oops!... I Did It Again en 2000
+kendall-jenner;Kendall Jenner;F;Personnalité TV;03/11/1995;28;Américaine;Scorpion;États-Unis;177;59;Brun foncé;Brun foncé;–;ambassadrice de Calvin Klein, Adidas, La Perla et Estée Lauder;a commencé une carrière dans le mannequinat à quatorze ans;joue Aj - Hawaii 5 - 0
+gigi-hadid;Gigi Hadid;F;Mannequin;23/04/1995;28;Américaine;Taureau;États-Unis;178;59;Verts, bleu;Blonds;–;pose pour Baby Guess à l'âge de 2 ans;défile pour plusieurs grandes marques de luxe dont Versace, Chanel, Elie Saab, Fendi, Marc Jacobs, Anna Sui …;ambassadrice de la marque Tommy Hilfiger en 2016
+julia-roberts;Julia Roberts;F;Actrice, Producteur;28/10/1967;56;Américaine;Scorpion;États-Unis;175;59;Brun clair;Blond foncé;–;révélée par la comédie romantique Pretty Woman;reçoit l'Oscar de la meilleure actrice pour son rôle dans le film Erin Brockovich, seule contre tous;joue Tess Ocean -  Ocean's Eleven
+meghan-markle;Meghan Markle;F;Actrice;04/08/1981;42;Américaine;Lion;États-Unis;169;60;Brun foncé;Brun foncé;–;joue Rachel Zane - Suits : Avocats sur mesure.;épouse le prince Harry le 19 mai 2018;joue Jamie - Comment tuer son boss ?
+karlie-kloss;Karlie Kloss;F;Mannequin;03/08/1992;31;Américaine;Lion;États-Unis;186;60;Verts;Châtain;–;classée dans le top 30 des Mannequins des années 2000 par le magazine Vogue Paris;préside la société Bradford Media;Ève du jardin d'Eden  -  Zoolander 2
+beyonce;Beyonce;F;Chanteuse, autrice-compositrice;04/09/1981;42;Américaine;Vierge;États-Unis;168;61;Brun foncé;Brun foncé;–;deuxième artiste la plus récompensée au monde juste après Michael Jackson;épouse de Jay - Z;sortson album Dangerously in Love en 2003
+priyanka-chopra;Priyanka Chopra;F;Chanteuse, autrice-compositrice;18/07/1982;41;Indienne;Cancer;Inde;169;61;Brun foncé;Brun foncé;–;une des artistes les plus reconnues d'Inde;le gouvernement indien lui décerne le Padma Shri en 2016;fondatrice de la société de production Purple Pebble Pictures
+michael-jackson;Michael Jackson;M;Chanteur/euse, Acteur, Danseur/euse, Producteur de disques;29/08/1958;50;Américaine;Vierge;États-Unis;175;61;Noir;Noirs;25/06/2009;"surnommé le ""Roi de la Pop""";cinq de ses albums solo sont parmi les albums les plus vendus au monde;a popularisé le moonwalk
+jennifer-lawrence;Jennifer Lawrence;F;Actrice;15/08/1990;33;Américaine;Lion;États-Unis;174;62;Bleu;Blonds;–;joue Katniss Everdeen  -  The Hunger Games;joue Mystique - X-Men;lance sa propre société de production nommée Excellent Cadaver en 2018
+katy-perry;Katy Perry;F;Chanteur/euse, Auteur-compositeur;25/10/1984;39;Américaine;Scorpion;États-Unis;174;62;Bleu;Blonds;–;devient célèbre en 2008 avec la sortie de son deuxième album,  One of the Boys;a remporté quatre Guinness World Records, cinq American Music Awards, un Brit Award et un prix Juno;interprète des chansons Roar et Dark Horse
+dua-lipa;Dua Lipa;F;Chanteur/euse, Mannequin, Auteur-compositeur;22/08/1995;28;Britannique/Albanaise;Lion;Angleterre;173;62;Brun clair;Brun foncé;–;interprète du single One Kiss avec Calvin Harris en2018;Ambassadrice honorifique de la république du Kosovo, elle soutient la cause des Albanais du Kosovo;Autrice du titre Levitating
+kylie-jenner;Kylie Jenner;F;Personnalité TV;10/08/1997;26;Américaine;Lion;États-Unis;169;63;Brun foncé;Noirs;–;demi-sœur de Kim Kardashian;devient en mars 2019, à l'âge de 21 ans, la plus jeune milliardaire de l'histoire;en couple avec l'acteur franco-américain Timothée Chalamet depuis avril 2023
+nicki-minaj;Nicki Minaj;F;Chanteuse, autrice-compositrice;08/12/1982;41;Trinidadienne/Américaine;Sagittaire;Trinité-et-Tobago;157;63;Brun foncé;Noirs;–;De 2007 à 2009, sort une série de trois mixtapes : Playtime Is Over, Sucka Free et Beam Me Up Scotty, écoulée à 1 million d’exemplaires;joue Lydia - Triple Alliance;en couple avec le rappeur Meek Mill de 2015 à 2018
+kevin-hart;Kevin Hart;M;Acteur, comédien;06/07/1979;44;Américaine;Cancer;États-Unis;156;63;Brun foncé;Noirs;–;a commencé sa carrière dans le stand-up;"joue Franklin ""Mouse"" Finbar - Jumanji : Bienvenue dans la jungle";ami proche de Dwayne Johnson
+kate-upton;Kate Upton;F;Mannequin;10/06/1992;31;Américaine;Gémeaux;États-Unis;179;63;Bleu;Blonds;–;Son arrière-grand-père est l'inventeur du lave-linge moderne et le fondateur de la Whirlpool Corporation;est l'une des vedettes du supplément annuel de Sports Illustrated, Sports Ilustrated Swimsuit Issue;joue Amber - Triple Alliance 
+sophie-turner;Sophie Turner;F;Actrice;21/02/1996;28;Britannique;Poissons;Angleterre;175;64;Verts;Blonds;–;joue Sansa Stark - Game of Thrones;joue Jean Grey adolescente - X-Men;marraine de l'association Women for Women International
+blake-lively;Blake Lively;F;Actrice;25/08/1987;36;Américaine;Vierge;États-Unis;178;64;Bleu;Blonds;–;joue Serena Van Der Woodsen - Gossip Girl;mariée à Ryan Reynolds;joue Veronica - Café Society
+tom-holland;Tom Holland;M;Acteur, danseur;01/06/1996;27;Britannique;Gémeaux;Angleterre;173;65;Brun foncé;Brun foncé;–;joue Spider-Man - Captain America: Civil War;en couple avec Zendaya;joue Nathan Drake - Uncharted.
+justin-bieber;Justin Bieber;M;Chanteur/euse;01/03/1994;30;Canadienne;Poissons;Canada;175;66;Brun clair;Châtain;–;sort son premier album à 15 ans, My World;auteur du single Baby;marié à Hailey Baldwin
+tom-cruise;Tom Cruise;M;Acteur;03/07/1962;61;Américaine;Cancer;États-Unis;170;66;Verts;Brun foncé;–;joue Pete « Maverick » Mitchell - Top Gun;joue Ethan Hunt - Mission impossible;joue Jack Reacher - Jack Reacher
+lionel-messi;Lionel Messi;M;Football player;24/06/1987;36;Argentine/Espagnole;Cancer;Argentine;170;67;Brun foncé;Brun foncé;–;possède 8 Ballons d'or;rejoint à treize ans le FC Barcelone;auteur de plus de 840 buts et 350 passes décisives dans sa carrière, en plus de 1 000 matchs professionnels
+neymar;Neymar;M;Footballer;05/02/1992;32;Brésilien;Verseau;Brésil;174;68;Noisette;Brun foncé;–;rejoint le club du Santos FC en 2003;rejoint le Paris Saint-Germain en 2017;rejoint le FC Barcelone en 2013
+bruno-mars;Bruno Mars;M;Chanteur/euse, Musicien, Auteur-compositeur, Producteur de disques, chorégraphe;08/10/1985;38;Américaine;Balance;États-Unis;165;68;Brun foncé;Brun foncé;–;sort son premier album Doo-Wops and Hooligans en 2010;sort son troisième album 24K Magic en 2016;marié à Jessica Caban
+rami-malek;Rami Malek;M;Acteur;12/05/1981;42;Américaine/Égyptienne;Taureau;États-Unis;176;69;Verts;Noirs;–;joue Elliot Alderson -  Mr. Robot;joue Freddie Mercury - Bohemian Rhapsody;joue David L. Hill - Oppenheimer
+freddie-mercury;Freddie Mercury;M;Chanteur/euse, Auteur-compositeur;05/09/1946;45;Britannique;Vierge;Tanzanie;177;73;Brun foncé;Noirs;24/11/1991;est l'un des cofondateurs du groupe de rock Queen en 1970;il réalise deux albums en solo, Mr. Bad Guy en 1985 et Barcelona en 1988;co-auteur des titres  Bohemian Rhapsody, We Are the Champions, Don't Stop Me Now
+zac-efron;Zac Efron;M;Chanteur/euse, Acteur;18/10/1987;36;Américaine;Balance;États-Unis;174;74;Bleu;Châtain;–;joue Troy Bolton - High School Musical;joue Matt Brody - Baywatch : Alerte à Malibu;joue Ted Bundy - Extremely Wicked, Shockingly Evil and Vile.
+christina-hendricks;Christina Hendricks;F;Actrice;03/05/1975;48;Américaine;Taureau;États-Unis;171;74;Bleu;Roux;–;joue Joan Holloway - Mad Men;joue Roberta Hoffmann - The Neon Demon;joue Blanche - Drive
+kit-harington;Kit Harington;M;Acteur;26/12/1986;37;Britannique;Capricorne;Angleterre;173;76;Brun foncé;Brun foncé;–;joue Jon Snow - Game of Thrones;marié à l'actrice Rose Leslie;joue Dane Whitman - Les Éternels
+sergio-ramos;Sergio Ramos;M;Footballer;30/03/1986;37;Espagnole;Bélier;Espagne;182;76;Brun foncé;Châtain;–;joue au poste de défenseur central au Séville FC;remporte l'Euro 2008, la Coupe du monde 2010 et l'Euro 2012 en tant que titulaire;fait partie des rares défenseurs ayant marqué plus de 10 buts en Liga depuis Ronald Koeman
+brad-pitt;Brad Pitt;M;Acteur, Producteur;18/12/1963;60;Américaine;Sagittaire;États-Unis;180;77;Bleu;Blonds;–;élu deux fois « Homme le plus sexy du monde » par le magazine People en 1995 et en 2000;joue Benjamin Button - L'Étrange Histoire de Benjamin Button;joue Cliff Booth - Once Upon a Time… in Hollywood
+tom-hardy;Tom Hardy;M;Acteur;15/09/1977;46;Britannique;Vierge;Angleterre;175;77;Bleu;Brun foncé;–;joue Alfie Solomons - Peaky Blinders;joue Eddie Brock - Venom;Le 9 juin 2018, la reine Élisabeth II l'honore en le faisant Commandeur de l’Ordre de l'Empire britannique
+kelly-clarkson;Kelly Clarkson;F;Chanteuse, autrice-compositrice;24/04/1982;41;Américaine;Taureau;États-Unis;160;78;Noisette;Noirs;–;fait ses débuts chez RCA Records après avoir remporté la première saison de l’émission American Idol;sort un premier album en 2003, intitulé Thankful;devient la nouvelle coach de The Voice aux États-Unis aux côtés de Alicia Keys, Blake Shelton et Adam Levine en 2018
+johnny-depp;Johnny Depp;M;Acteur, musicien, Producteur;09/06/1963;60;Américaine;Gémeaux;États-Unis;178;79;Brun foncé;Brun foncé;–;joue Capitaine Jack Sparrow - Pirates des Caraïbes;joue Le Chapelier fou - Alice au pays des merveilles;voix du personnage Rango - Rango
+mark-wahlberg;Mark Wahlberg;M;Acteur;05/06/1971;52;Américaine;Gémeaux;États-Unis;174;79;Noisette;Brun foncé;–;joue Sully - Uncharted;joue Cade Yeager - Transformers: The Last Knight;joue John Bennett - Ted
+ryan-gosling;Ryan Gosling;M;Ecrivain;12/11/1980;43;Canadienne;Scorpion;Canada;184;79;Bleu;Blonds;–;est en couple avec Eva Mendes;joue Sebastian - La La Land;joue Ken - Barbie
+ronaldo;Ronaldo;M;Footballer ;22/09/1976;47;Brésilienne;Vierge;Brésil;183;80;Brun foncé;Brun foncé;–;surnommé Il Fenomeno en Italie et Ronaldinho au Brésil;Meilleur buteur lors de la Coupe du monde 2002 avec huit buts;élu meilleur footballeur de l'année FIFA en 1996, 1997, 2002 et Soulier d'or européen en 1997
+will-smith;Will Smith;M;Acteur;25/09/1968;55;Américaine;Balance;États-Unis;188;81;Brun foncé;Noirs;–;joue l'inspecteur Mike Lowrey - Bad Boys;joue l'agent J - Men in Black;joue Robert Neville - Je suis une légende
+hugh-jackman;Hugh Jackman;M;Acteur;12/10/1968;55;Australienne;Balance;Australie;188;81;Brun clair;Brun foncé;–;joue Wolverine - X-Men;joue Jean Valjean - Les Misérables;marié à avec l'actrice et productrice australienne Deborra-Lee Furness
+bradley-cooper;Bradley Cooper;M;Acteur;05/01/1975;49;Américaine;Capricorne;États-Unis;185;83;Bleu;Châtain;–;joue Phil Wenneck - Very Bad Trip;joue Jackson Maine - A Star Is Born;joue Eddie Morra - Limitless
+cristiano-ronaldo;Cristiano Ronaldo;M;Footballer;05/02/1985;39;Portugaise;Verseau;Portugal;187;84;Brun clair;Brun foncé;–;auteur de plus de 870 buts en plus de 1 200 matchs en carrière, il est le meilleur buteur de l'histoire du football selon la FIFA;recruté par Manchester United en 2003;rejoint le Real Madrid en 2009
+bruce-willis;Bruce Willis;M;Acteur, musician;19/03/1955;68;Américaine;Poissons;Allemagne;182;84;Bleu;Aucun cheveux;–;joue Butch Coolidge - Pulp Fiction;joue David Dunn - Incassable;joue Korben Dallas - Le Cinquième Élément
+jason-statham;Jason Statham;M;Acteur, Producteur;12/09/1967;56;Britannique;Vierge;Angleterre;179;85;Noisette;Noirs;–;avant sa carrière d'acteur, il a également été mannequin et a pratiqué le plongeon à haut niveau;"joue Frank Martin - 	Le Transporteur	";joue Lee Christmas - Expendables : Unité spéciale
+ryan-reynolds;Ryan Reynolds;M;Acteur;23/10/1976;47;Canadienne/Américaine;Scorpion;Canada;189;85;Noisette;Châtain;–;joue Wade Wilson - Deadpool;joue Guy - Free Guy;joue Hal Jordan - Green Lantern
+jim-carrey;Jim Carrey;M;Acteur, scénariste, comédien;17/01/1962;62;Canadienne/Américaine;Capricorne;Canada;188;85;Brun foncé;Brun foncé;–;joue Stanley Ipkiss - The Mask;joue Lloyd Christmas - Dumb and Dumber;joue Truman Burbank - The Truman Show
+ashley-graham;Ashley Graham;F;Mannequin;30/10/1987;36;Américaine;Scorpion;États-Unis;176;86;Brun foncé;Brun foncé;–;est l'égérie de Swimsuitsforall en 2015 et des marques H&M et Addition Elle en 2016; sort son premier livre autobiographique, A New Model : What Confidence, Beauty, and Power Really Look Like, le 7 mai 2017;devient l'égérie de la marque de cosmétiques Revlon en 2018
+shawn-mendes;Shawn Mendes;M;Chanteur/euse;08/08/1998;25;Canadien;Lion;Canada;187;86;Brun foncé;Brun foncé;–;se fait connaître en 2013 sur l'application Vine, où il publie de courtes vidéos musicales;son premier album studio sort en 2015 et est intitulé : Handwritten;officialise sa relation avec Camila Cabello en juin 2019
+chris-evans-actor;Chris Evans;M;Acteur;13/06/1981;42;Américaine;Gémeaux;États-Unis;182;89;Bleu;Châtain;–;joue Johnny Storm - Les Quatre Fantastiques;joue Steve Rogers - Captain America : First Avenger;joue Lloyd Hansen - The Gray Man
+chris-hemsworth;Chris Hemsworth;M;Acteur;11/08/1983;40;Australienne;Lion;Australie;190;90;Bleu;Blonds;–;marié à l'actrice Elsa Pataky;joue Thor - Thor;joue l'agent H - Men in Black: International
+michael-jordan;Michael Jordan;M;Joueur de Basketball;17/02/1963;61;Américaine;Verseau;États-Unis;198;96;Brun foncé;Aucun cheveux;–;a contribué à populariser internationalement le basket-ball et la NBA à travers le monde dans les années 1980 et 1990;remporte son premier titre de champion NBA avec les Bulls en 1991;également célèbre pour les produits auxquels il prête son image, comme le parfum ou les chaussures
+donald-trump;Donald Trump;M;Personnalité TV, businessman, Politicien/enne;14/06/1946;77;Américaine;Gémeaux;États-Unis;188;97;Brun;Gris;–;45e président des États-Unis, à partir du 20 janvier 2017;Fils de promoteur immobilier, il se constitue dès lors un empire grâce à des bâtiments prestigieux;"""Make America great again"""
+ben-affleck;Ben Affleck;M;Acteur, Producteur, scénariste, réalisateur;15/08/1972;51;Américaine;Lion;États-Unis;191;97;Noisette;Brun foncé;–;marié à Jennifer Lopez;joue capitaine Rafe McCawley - Pearl Harbor;joue Bruce Wayne - Batman v Superman : L'Aube de la justice
+sylvester-stallone;Sylvester Stallone;M;Acteur, Producteur, scénariste, réalisateur;06/07/1946;77;Américaine;Cancer;États-Unis;178;101;Brun foncé;Brun foncé;–;se révèle au grand public en 1976 dans le célèbre film Rocky;connu pour son rôle principal dans Rambo;joue Barney Ross - Expendables : Unité spéciale
+vin-diesel;Vin Diesel;M;Acteur;18/07/1967;56;Américaine;Cancer;États-Unis;183;102;Brun foncé;Aucun cheveux;–;révélé par un second rôle dans Il faut sauver le soldat Ryan;a appelé sa dernière fille Pauline en hommage à son ami Paul Walker;joue Dominic « Dom » Toretto - Fast and Furious 5
+arnold-schwarzenegger;Arnold Schwarzenegger;M;Acteur, businessman, Politicien/enne, bodybuilder;30/07/1947;76;Autrichienne/Américaine;Lion;Autriche;188;105;Bleu;Châtain;–;a été surnommé le « Chêne autrichien »pendant ses années de culturisme, puis « Governator » pendant son mandat de gouverneur de Californie;joue le Terminator T-800 - Terminator;joue Trench Mauser - Expendables : Unité spéciale
+dwayne-johnson;Dwayne Johnson;M;Acteur, Catcheur;02/05/1972;51;Américaine/Canadienne;Taureau;États-Unis;195;118;Brun foncé;Brun foncé;–;catcheur connu au sein de la World Wrestling Federation / Entertainment jusqu'en 2004;joue Black Adam - Black Adam;joue Mitch Buchannon - Baywatch : Alerte à Malibu
+mia-khalifa;Mia Khalifa;F;Actrice, p*rnstar;10/02/1993;31;Américaine/Libanaise;Verseau;Liban;157;56;Noir;Brun foncé;-;surtout devenue célèbre pour avoir eu une courte carrière en tant qu'actrice de films pornographiques entre octobre 2014 et février 2015; co-anime avec Gilbert Arenas l'émission Out of Bounds, une émission sur le sport sur la chaîne YouTube Complex News's;adresse régulièrement des critiques à l'industrie pornographique, et à la société Bang Bros en particulier, dans lesquelles elle affirme avoir été manipulé

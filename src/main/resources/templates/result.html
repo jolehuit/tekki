@@ -8,9 +8,10 @@
 <body>
 <div class="container">
     <h1 th:text="${guessResult}"></h1>
+    <p>Total des points : <span th:text="${points}"></span></p>
     <div class="buttons">
-        <a th:if="${guessResult.contains('Bravo')}" th:href="@{/game}" class="button">Rejouer</a>
-        <a th:if="${!guessResult.contains('Bravo')}" th:href="@{/game}" class="button">Reposer des questions</a>
+        <a th:if="${guessResult.contains('Bravo')}" th:href="@{/}" class="button">Rejouer</a>
+        <a th:if="${!guessResult.contains('Bravo')}" th:href="@{/}" class="button">Reposer des questions</a>
     </div>
 </div>
 </body>

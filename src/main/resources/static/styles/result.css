@@ -6,15 +6,6 @@ body {
     background-color: #282c34;
 }
 
-#background-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-}
-
 .container {
     display: flex;
     flex-direction: column;
@@ -33,44 +24,13 @@ h1 {
     text-align: center;
 }
 
-p {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-select {
-    width: 40%;
-    padding: 10px;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #333;
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.answer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom:2rem;
-    text-shadow: rgba(0,0,0,0.5) 0px 3px 3px;
-}
-
-
 .buttons {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-button {
+.button {
     font-weight: 600;
     color: #484c7a;
     font-size: 1em;
@@ -79,18 +39,13 @@ button {
     background-image: linear-gradient(180deg,#fff,#f5f5fa);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all .2s ease-out;
-    cursor: pointer;
-    margin-bottom:1rem;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 1rem;
 }
 
-button:hover {
+.button:hover {
     box-shadow: 0 8px 22px 0 rgb(37 44 97 / 15%), 0 4px 6px 0 rgb(93 100 148 / 20%);
     transform: scale(1.05);
-}
-
-#questionsSelect {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
