@@ -40,7 +40,7 @@
 - **Application :**
   - Lorsque le joueur clique sur "Commencer" :
     - Initialiser un compteur de points à 150 points pour le joueur.
-    - Choisir aléatoirement un personnage célèbres parmi 100 personnages existant dans la base de données.
+    - Choisir aléatoirement un personnage célèbre parmi 100 personnages existant dans la base de données.
     - Filtrer 20 questions et réponses ciblées sur ce personnage depuis la base de données.
     - Rediriger le joueur vers la page des questions.
 
@@ -87,7 +87,7 @@
       - Déduire 20 points du compteur de points.
       - Retirer le personnage sélectionné de la liste déroulante.
       - Mettre à jour l'affichage du compteur de points avec le nouveau score.
-      - Si le score atteint 0 points, rediriger le joueur vers la page résultat avec un message de défaite.
+      - Si le score atteint 0 point, rediriger le joueur vers la page résultat avec un message de défaite.
     - Si la réponse est correcte :
       - Rediriger le joueur vers la page résultat avec un message de victoire.
 
@@ -97,7 +97,7 @@
   - Afficher un message indiquant si le joueur a gagné ou perdu.
     - Si le joueur a gagné : "Bravo ! Tu as deviné correctement !"
     - Si le joueur atteint le score égale à 0 : "Désolé, tu as perdu. Ton score est de zéro."
-    - Si le joueur à posé tout les questions : "Désolé, tu as perdu. Il ne reste plus de questions"
+    - Si le joueur a posé toutes les questions : "Désolé, tu as perdu. Il ne reste plus de questions"
   - Afficher le nombre de points restants.
   - Afficher un bouton "Réjouer".
 
